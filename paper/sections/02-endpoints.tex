@@ -1,0 +1,39 @@
+\section{Endpoint coordinates and the actual global rule}\label{sec:endpoints}
+Call a state \emph{row-nonempty} if it meets each chain $\{i\}\times[n]$. Such a state is uniquely represented by intervals $[a_i,b_i]$ satisfying
+\begin{equation}\label{eq:antitone}
+ 1\le a_m\le\cdots\le a_1\le n,\quad
+ 1\le b_m\le\cdots\le b_1\le n,\quad a_i\le b_i.
+\end{equation}
+For example, if $a_i<a_{i+1}$, the two comparable endpoints in rows $i$ and $i+1$ would force the omitted point $(i+1,a_i)$; this proves the first monotonicity condition. The upper condition follows in the same way. Conversely, if $(i,x)\le(k,z)\le(j,y)$ with both endpoints in the state, then $a_k\le a_i\le x\le z\le y\le b_j\le b_k$, proving convexity.
+
+For a subset $S$ write $\Delta S$ and $\nabla S$ for its downward and upward closures, and $\Inc(S)$ for the elements incomparable with every member of $S$. The global rowmotion rule of \cite[Theorem 1.1]{LLMSW} is
+\begin{equation}\label{eq:global}
+ R(I)=\bigl(\Inc(C)\setminus I\bigr)
+ \cup\bigl(\Delta C\setminus\Delta(\Min(I)\cap\Delta C)\bigr),
+ \qquad C=\Min(\nabla I\setminus I).
+\end{equation}
+We use this previously proved theorem. The formal companion separately proves it from the literal toggles.
+
+For any state, including a state with empty rows, define
+\begin{align*}
+ D_i&=\max\bigl(\{c:(r,c)\in C,\ r\ge i\}\cup\{0\}\bigr),\\
+ U_i&=\min\bigl(\{c:(r,c)\in C,\ r\le i\}\cup\{n+1\}\bigr),\\
+ E_i&=\max\bigl(\{c:(r,c)\in\Min(I)\cap\Delta C,\ r\ge i\}\cup\{0\}\bigr).
+\end{align*}
+The row form of \eqref{eq:global} is
+\begin{equation}\label{eq:row-rule}
+ R(I)_i=[E_i+1,D_i]\ \cup\ \bigl([D_i+1,U_i-1]\setminus I_i\bigr).
+\end{equation}
+An interval with reversed endpoints is empty. The formula follows because row $i$ of $\Delta C$ is $[1,D_i]$, row $i$ of $\nabla C$ is $[U_i,n]$, and row $i$ of the down-closure removed in \eqref{eq:global} is $[1,E_i]$.
+
+For a row-nonempty state, its ceiling rows are exactly
+\[
+ (i,b_i+1)\quad\text{with }b_i<n\text{ and }(i=1\text{ or }b_i<b_{i-1}),
+\]
+and its minimum rows are exactly $(i,a_i)$ with $i=1$ or $a_i<a_{i-1}$. In particular, if both endpoint lists are strict and $b_1<n$, then all cutoffs are ordinary and
+\begin{equation}\label{eq:translation}
+ R(I)_i=[a_i+1,b_i+1].
+\end{equation}
+The departures from translation are caused by missing ceiling or minimum rows; their propagation is the boundary-wave mechanism used below.
+
+For the endpoint-word encoding in this paragraph, assume additionally that all $2m$ endpoint coordinates are pairwise distinct. Read them in increasing order, labeling a lower endpoint by $A$ and an upper endpoint by $B$. The result is a Dyck word: every initial segment contains at least as many $A$'s as $B$'s. Conversely, a Dyck word on strictly ordered coordinates gives valid rank-paired intervals. A \emph{valley} means an adjacent $BA$ in this word. This extra distinctness assumption belongs to the word encoding; strictness of the two lists separately still allows cross-list coincidences in \eqref{eq:translation} and the ordinary passage below. We use one-based row indices but zero-based gap indices.

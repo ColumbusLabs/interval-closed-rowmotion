@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "filename": "rowmotion.pdf",
+  "sha256": "1e13c2beb873ed23f67676e9401ebc89e22c43d52a721897bbaab57a6cd070a1",
+  "bytes": 434433,
+  "pages": 23,
+  "source_manifest_sha256": "266ffdd7b5eeba84795a64e1d91c1a7e464bdac76c8c11b3762823897dd134c6",
+  "source_archive": "rowmotion-source.zip",
+  "source_archive_sha256": "1268fbbe2733965027df6772078644dd3b0f7aec22c13b86e9a44ca85a6cb722",
+  "toolchain": {
+    "pdftex": "3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+    "bibtex": "0.99d",
+    "poppler": "26.05.0"
+  },
+  "verification": "Actual pdfLaTeX/BibTeX build; final log contains no unresolved citations/references, changed-label warning or overfull boxes."
+}

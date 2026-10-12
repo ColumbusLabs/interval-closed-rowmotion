@@ -1,0 +1,96 @@
+\section{Counting the models and completing the asymptotic}\label{sec:counting}
+All estimates in this section hold at fixed $m$ and fixed spacing constants. Let
+\[
+ V_m=\sum_{w\text{ Dyck of semilength }m}\#\{\text{valleys of }w\}
+     =\frac{m-1}{2}\Cat_m.
+\]
+For example, the Narayana distribution of the number of peaks is symmetric under $k\leftrightarrow m+1-k$; its mean is $(m+1)/2$. Valleys equal peaks minus one, giving the displayed identity. This is standard Dyck enumeration.
+
+\subsection{All actual states}
+The known row-nonempty count is
+\begin{equation}\label{eq:narayana}
+ F_m(n)=\frac1{m+1}\binom{n+m-1}{m}\binom{n+m}{m}
+       =c_m(n)_m(n+1)_m,
+\end{equation}
+Here $(x)_m=x(x+1)\cdots(x+m-1)$ is the \emph{rising factorial}, with $(x)_0=1$. The formula is \cite[Theorem 2.7, arXiv v1]{ELLMSW}, which attributes it to \cite[Theorem 4.4, arXiv v2]{ELMSW}. A state with an empty row can be overcounted by choosing that row and an arbitrary interval or empty set in each other row. Thus their number is at most
+\[
+ m\left(1+\frac{n(n+1)}2\right)^{m-1}=O_m(n^{2m-2}).
+\]
+The two rising factorials have sum of shifts $m(m-1)/2+m(m+1)/2=m^2$, so
+\begin{equation}\label{eq:denominator}
+ A_m(n)=c_m\bigl(n^{2m}+m^2n^{2m-1}\bigr)+O_m(n^{2m-2}).
+\end{equation}
+This includes all empty-row states; none are silently removed from the denominator.
+
+\subsection{Matching states}
+There are $\Cat_m\binom N{2m}$ unrestricted noncrossing $m$-edge matchings. Supports with at least two gaps below $D$ number $O_m(N^{2m-2})$. Indeed, two disjoint close pairs are specified by two starting vertices, bounded offsets, and $2m-4$ other vertices. If the pairs share a vertex, specify that vertex, two bounded offsets, and $2m-3$ others. There are only width-dependent numbers of choices of positions and noncrossing pairings. This also counts gaps crossing the cyclic seam.
+
+The number of matchings with a \emph{marked} ambient-adjacent edge is exactly
+\[
+ N\Cat_{m-1}\binom{N-2}{2m-2}.
+\]
+Choose its cyclic first vertex, choose all other support vertices, and match them noncrossingly; an adjacent chord crosses none of the others. Multiple marked adjacent edges occur only on the preceding two-short-gap locus. Therefore marking versus not marking changes only the error term, and
+\begin{align}
+ |X|&=\Cat_m\binom N{2m}-N\Cat_{m-1}\binom{N-2}{2m-2}
+       +O_m(n^{2m-2})\notag\\
+ &=c_m\bigl(n^{2m}+(2m-m^2)n^{2m-1}\bigr)+O_m(n^{2m-2}).\label{eq:X-count}
+\end{align}
+The coefficient calculation uses $N=n+m+1$,
+\[
+ \Cat_m\binom N{2m}=c_m(n^{2m}+3mn^{2m-1})+O_m(n^{2m-2}),
+ \qquad \frac{\Cat_{m-1}}{(2m-2)!}=m(m+1)c_m.
+\]
+
+\subsection{Triple partitions}
+The marked-valley bijection of \cref{sec:partitions} gives $V_m$ partitions on each $(2m-1)$-element support. Losing supports with a short gap costs $O_m(N^{2m-2})$ by specifying one close pair. Hence
+\begin{equation}\label{eq:Y-count}
+ |Y|=V_m\binom N{2m-1}+O_m(n^{2m-2})
+     =c_m m(m-1)n^{2m-1}+O_m(n^{2m-2}).
+\end{equation}
+The supports and their partitions are counted once; no extra phase or rooted-word multiplicity occurs.
+
+\subsection{Proper-period losses are state losses}
+\begin{lemma}\label[lemma]{lem:proper}
+The number of source states in $X$ with least rotation period less than $N$ is $O_m(N^m)$. The analogous number in $Y$ is $O_m(N^{\lfloor(2m-1)/2\rfloor})$. Both are $O_m(n^{2m-2})$ for $m\ge2$.
+\end{lemma}
+\begin{proof}
+If a support of size $k$ has a nontrivial stabilizer, it is invariant under a cyclic subgroup of some order $q>1$ dividing both $N$ and $k$. The action on the circle is free, so the support is the union of $k/q$ orbits of that subgroup. There are $\binom{N/q}{k/q}$ choices. For fixed $k$ there are at most as many possible $q$ as divisors of $k$, independent of $N$. The number of matchings or partitions on a fixed support is bounded by a constant depending only on $k$. Consequently the total is $O_k(N^{\lfloor k/2\rfloor})$. Apply this with $k=2m$ and $k=2m-1$. The odd case could be sharpened using $q\ge3$, but that is unnecessary.
+\end{proof}
+In particular the matching loss is $O(n^2)$ at $m=2$, exactly the allowed error. The lemma counts actual source states with a proper return. It does not count orbits and then multiply by a possible orbit length.
+
+\subsection{The upper and lower bounds}
+Injectivity, equivariance, and disjointness of the two models, together with \cref{lem:proper}, give for all sufficiently large $n$
+\begin{align*}
+ A_m(n)-E_m(n)
+ &\ge |X|+|Y|-O_m(n^{2m-2})\\
+ &=c_m\bigl(n^{2m}+mn^{2m-1}\bigr)+O_m(n^{2m-2}).
+\end{align*}
+Subtracting from \eqref{eq:denominator} proves
+\[
+ E_m(n)\le c_m m(m-1)n^{2m-1}+O_m(n^{2m-2}).
+\]
+
+For the lower bound, each marked unit-gap chamber has $2m$ free gaps: the left margin, the right margin, and the $2m-2$ unmarked internal gaps. They sum to $n-1$. With each at least $G$, their exact number, for $n\ge1+2mG$, is
+\[
+ \binom{n-2mG+2m-2}{2m-1}.
+\]
+The $V_m$ choices of word and marked valley give disjoint actual states. By \cref{prop:nonreturn}, every one is exceptional. Thus
+\begin{align*}
+ E_m(n)&\ge V_m\binom{n-2mG+2m-2}{2m-1}\\
+ &=c_m m(m-1)n^{2m-1}+O_m(n^{2m-2}).
+\end{align*}
+This is a full polynomial-error lower estimate, not merely a liminf. The two bounds prove \eqref{eq:main-count}. Dividing by \eqref{eq:denominator}, whose positive leading coefficient is $c_m$, proves \eqref{eq:main-ratio} and completes \cref{thm:main}.
+
+\subsection{Width one and the original positive-width conjecture}
+\begin{proposition}[Consequence of the chain classification in {\cite[Theorem 3.2, arXiv v2]{ELMSW}}]\label[proposition]{prop:width-one}
+The fraction of interval-closed subsets of $[1]\times[n]$ of least rowmotion period $n+2$ tends to one.
+\end{proposition}
+\begin{proof}
+The cited theorem already gives this limit. For completeness, the following two-point model rederives the needed bound. Put $N=n+2$ and label the circle $1,\ldots,N$. Non-cyclic-adjacent unordered pairs $\{p<q\}$ correspond to intervals $[p,q-2]$. They give every nonempty interval except $[1,n]$. Rotation by one agrees with rowmotion, since
+\[
+ R([a,b])=[a+1,b+1]\ (b<n),\qquad
+ R([a,n])=[1,a-1]\ (a\ge2).
+\]
+These formulas follow directly from \eqref{eq:global} on a chain. The two omitted states, empty and full, interchange. A two-point subset has a nontrivial rotation stabilizer only when its points are antipodal. Therefore at most $N/2+2$ of the $1+n(n+1)/2$ states can have least period different from $N$, which proves the limit.
+\end{proof}
+\Cref{thm:main}, together with the previously known width-one case recalled in \cref{prop:width-one}, establishes Conjecture 4.1 of \cite{LLMSW} for every fixed positive width. The sharp coefficient formula is stated only for $m\ge2$; antipodal symmetries explain why substituting $m=1$ into that formula is not justified.

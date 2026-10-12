@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[a4paper,margin=29mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem,booktabs,array,longtable}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\crefname{lemma}{lemma}{lemmas}
+\Crefname{lemma}{Lemma}{Lemmas}
+\crefname{proposition}{proposition}{propositions}
+\Crefname{proposition}{Proposition}{Propositions}
+\hypersetup{pdftitle={Sharp exceptional density for rowmotion on interval-closed sets of a rectangle},pdfauthor={Columbus Labs},pdfsubject={Fixed-width sharp exceptional-state asymptotics},pdfkeywords={rowmotion, interval-closed sets, noncrossing matchings, Lean}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small Sharp exceptional density for interval-closed rowmotion}\fancyhead[R]{\small Columbus Labs}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlist{itemsep=2pt,topsep=5pt}
+\allowdisplaybreaks[2]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\IC}{\mathcal{IC}}
+\newcommand{\Row}{\operatorname{Row}}
+\newcommand{\Min}{\operatorname{Min}}
+\newcommand{\Inc}{\operatorname{Inc}}
+\newcommand{\Ceil}{\operatorname{Ceil}}
+\newcommand{\per}{\operatorname{per}}
+\newcommand{\Cat}{\mathrm{Cat}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\OO}{\mathrm{O}}
+\newcommand{\II}{\mathrm{I}}
+\newcommand{\TT}{\mathrm{T}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\src}[1]{\texttt{\detokenize{#1}}}
+\title{Sharp exceptional density for rowmotion\protect\\on interval-closed sets of a rectangle}
+\author{Columbus Labs\\\small\href{mailto:info@columbus-labs.com}{info@columbus-labs.com}}
+\date{12 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For fixed $m\ge2$, let $A_m(n)$ count the interval-closed subsets of $[m]\times[n]$, and let $E_m(n)$ count those whose least period under reverse-toggle rowmotion is different from $n+m+1$. We prove
+\[
+\frac{E_m(n)}{A_m(n)}=\frac{m(m-1)}n+O_m(n^{-2}).
+\]
+The proof combines two disjoint rotation models for typical states with an explicit family of nonreturning states. The first model uses noncrossing matchings with at most one short support gap; the second uses sparse noncrossing partitions with one three-element block. Exact overlapping boundary-wave formulas establish both models for the actual toggle action. A telescoping boundary-time identity proves nonreturn on separated unit-gap valley chambers. Counting states, including the proper-period losses, then gives the sharp coefficient. In particular the result proves Conjecture 4.1 of Lafreni\`ere, Lewis, McNicholas, Striker, and Welch for every fixed width, with width one treated separately. The main fixed-width theorem also has an end-to-end Lean certificate; the proof below is mathematical rather than an appeal to that certificate.
+\end{abstract}
+\vspace{3pt}
+\noindent\small\textcopyright\ 2026 Columbus Labs. Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.\normalsize
+\tableofcontents
+\input{sections/01-introduction}
+\input{sections/02-endpoints}
+\input{sections/03-matching}
+\input{sections/04-partitions}
+\input{sections/05-nonreturn}
+\input{sections/06-counting}
+\input{sections/07-certification}
+\appendix
+\input{sections/A-local-waves}
+\input{sections/B-unit-collisions}
+\bibliographystyle{alpha}
+\bibliography{references}
+\end{document}

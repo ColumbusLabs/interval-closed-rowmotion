@@ -1,0 +1,68 @@
+\section{A matching model with one short support gap}\label{sec:matching}
+Fix $m\ge2$, $N=n+m+1$, and $D=3m+8$. Vertices of the circle are labeled $1,\ldots,N$ clockwise; $\rho$ adds one modulo $N$. A support gap is the positive clockwise distance between consecutive occupied vertices, including the wrap gap.
+
+Let $X=X_{m,N,D}$ consist of noncrossing matchings with $m$ edges, at most one support gap less than $D$, and no edge joining cyclically adjacent vertices. The remaining vertices are unoccupied. This is a rotation-invariant family of actual matchings; no ordering of the edges is additional data.
+
+At a linear cut, label the smaller endpoint of each edge $A$ and the larger endpoint $B$. Stack pairing recovers the matching from this Dyck word. Write its opening and closing coordinates in decreasing order as $p_1>\cdots>p_m$ and $q_1>\cdots>q_m$. Let
+\[
+ C_0=\{1,\ldots,m-1\}.
+\]
+A matching has a \emph{clear cut} if its support avoids $C_0$. At such a cut define
+\begin{equation}\label{eq:decoder}
+ F_0(M)_i=[p_i-(m-1),\ q_i-(m+1)].
+\end{equation}
+
+\begin{lemma}\label[lemma]{lem:direct}
+The direct decoder is a well-defined injective map from clear-cut matchings in $X$ to row-nonempty states with strict endpoint lists.
+\end{lemma}
+\begin{proof}
+Rank balance gives $p_i<q_i$. If $q_i-p_i=1$, these two consecutive occupied endpoints form an adjacent peak $AB$ and are stack-paired, contradicting the adjacent-edge exclusion. Thus $q_i-p_i\ge2$, exactly the interval nonemptiness condition. The smallest occupied coordinate is an opening and is at least $m$; the smallest closing is at least two larger than an opening. Similarly every opening is at least two below a closing. Together with $q_1\le N$, these observations put all decoded endpoints in $[1,n]$. Both lists are strict. Recovering $p_i=a_i+m-1$, $q_i=b_i+m+1$ and stack-pairing recovers the original matching.
+\end{proof}
+
+The adjacent-edge exclusion is rotation-invariant. It is not asserted that every adjacent matched edge makes every cut invalid: rotating such an edge to $N-1,N$ already makes the first decoded row invalid, which is enough to explain the exclusion.
+
+\subsection{Local passage identities}
+The following three local calculations are proved in \cref{app:local}. They are identities for the actual rowmotion action.
+\begin{lemma}[Boundary passage identities]\label[lemma]{lem:passages}
+Let $M\in X_{m,N,D}$ have an occupied vertex at $N$ and a clear support cut. In particular, $M$ has at most one support gap below $D$ and has no edge joining cyclically adjacent vertices. The following assertions retain both restrictions.
+\begin{enumerate}[label=(\roman*)]
+\item If both adjacent support gaps are at least $D$, then
+\[
+ R^m F_0(M)=F_0(\rho^m M).
+\]
+The identity permits the single allowed short support gap elsewhere in the support, subject to the adjacent-edge exclusion.
+\item If the greatest occupied coordinates are $N-\delta,N$, with $1\le\delta<D$ the unique short support gap, then
+\[
+ R^{m+\delta}F_0(M)=F_0(\rho^{m+\delta}M).
+\]
+If these vertices are matched, $\delta\ge2$; otherwise they are both closing endpoints, with nested incident edges.
+\item In case (ii), if $\delta\ge m$, the intermediate iterates with $m\le t\le\delta$ also agree with $F_0(\rho^tM)$.
+\end{enumerate}
+\end{lemma}
+The third assertion matters: when the first point has finished crossing the corridor before the second arrives, there are clear cuts inside the two-point passage. Compatibility only at the terminal time would not define the desired global map.
+
+For completeness, the local bounds are uniform: take $H=m+6$. All nonexceptional raw endpoint separations are at least $D-2\ge H$, and the left margin at a passage start is at least $D-m+1\ge H$. The second margin is $D-m+1$, not $D-2$. The third occupied point lies at most at $N-\delta-D$, so it does not reach $N$ before the two-point passage finishes.
+
+\subsection{Gluing around the circle}
+\begin{proposition}\label[proposition]{prop:matching-embedding}
+There is an injective map $F_X:X\longrightarrow\IC([m]\times[n])$ satisfying
+\[
+ F_X(\rho M)=R(F_X(M)),
+\]
+and agreeing with $F_0$ at every clear cut. Consequently it preserves least periods.
+\end{proposition}
+\begin{proof}
+Parameterize rotations by integer time modulo $N$. Each occupied vertex has a start time when it reaches $N$. With no short gap, place an ordinary interval of length $m$ at each start. If a short pair has successive start times $s,s+\delta$, replace its two intervals by the single interval $[s,s+\delta+m]$. Every other consecutive start gap is at least $D>m$, so the interiors of these intervals are disjoint, including at the cyclic seam. There is no third start in a two-point interval. The unique short pair, if present, specifies its interval canonically; no choice of orbit basepoint is needed.
+
+Outside the interiors, use $F_0$. At phase $t$ inside an interval, use $R^t$ applied to $F_0$ at its initial clear cut. \Cref{lem:passages} identifies the terminal values and every intermediate clear value with $F_0$. For $\delta<m$ no intermediate cut is clear: the two forbidden-time intervals $[1,m-1]$ and $[\delta+1,\delta+m-1]$ cover all interior integer times. For $\delta\ge m$ the remaining clear times are exactly $m\le t\le\delta$, already covered by part (iii).
+
+Inside a passage, equivariance is built into the definition. At its end it follows from the terminal identity; between passages it follows from \eqref{eq:translation}. The same argument crosses the cyclic seam. This defines $F_X$ as a function of the current matching, even when its rotation orbit has a stabilizer, because the event intervals and their direct initial states are determined by that matching.
+
+To prove injectivity, suppose $F_X(M)=F_X(M')$. The union of their supports has at most $4m$ points. Each point forbids exactly $m-1$ rotation parameters from giving a clear cut. Thus if $N>4m(m-1)$ there is a simultaneous clear rotation. Equivariance and \cref{lem:direct} then imply $M=M'$. This size condition is automatic when $X$ is nonempty: its $2m$ positive support gaps include at least $2m-1$ gaps of size at least $D$, whence
+\[
+ N\ge(2m-1)D+1>4m(m-1).
+\]
+If $X$ is empty there is nothing to prove.
+
+Finally, source return implies image return by equivariance; image return implies source return by injectivity. Hence their least positive periods are equal.
+\end{proof}

@@ -1,0 +1,896 @@
+{
+  "schema_version": 1,
+  "purpose": "Auditable alignment of the written proof with the existing frozen certificate, not a replacement for either proof.",
+  "formal_anchor": {
+    "directory": "formal/sharp-allwidth",
+    "source_manifest": "formal/sharp-allwidth/SOURCE_MANIFEST.json",
+    "principal_theorem": "RowmotionSharpAllWidth.actualRowmotion_sharp_all_width"
+  },
+  "entries": [
+    {
+      "manuscript_location": "Definitions and conventions; sections 1–2",
+      "tex_source": "sections/01-introduction.tex",
+      "alignment": "Counts refer to literal interval-closed states and exact reverse-toggle rowmotion period. Toggles are applied maximal-to-minimal; the displayed composition is evaluated right to left. The all-2m-distinct requirement is local to the endpoint-word encoding.",
+      "formal_modules": [
+        {
+          "path": "Rowmotion/Toggle.lean",
+          "sha256": "ea1c524bb90f77138fd94ddd822dff98630a473b2e1de4a949c8fc521d88004e",
+          "url": "../formal/sharp-allwidth/Rowmotion/Toggle.lean",
+          "declarations": [
+            {
+              "name_as_declared": "IntervalClosed",
+              "line": 8,
+              "url": "../formal/sharp-allwidth/Rowmotion/Toggle.lean#L8"
+            },
+            {
+              "name_as_declared": "ICS",
+              "line": 11,
+              "url": "../formal/sharp-allwidth/Rowmotion/Toggle.lean#L11"
+            },
+            {
+              "name_as_declared": "toggle",
+              "line": 41,
+              "url": "../formal/sharp-allwidth/Rowmotion/Toggle.lean#L41"
+            }
+          ]
+        },
+        {
+          "path": "Rowmotion/GridRowmotion.lean",
+          "sha256": "83e71a84c327bff62a9e753284cec42582e6800f3a4d08aaba468d18089662af",
+          "url": "../formal/sharp-allwidth/Rowmotion/GridRowmotion.lean",
+          "declarations": [
+            {
+              "name_as_declared": "gridLinearExtension",
+              "line": 8,
+              "url": "../formal/sharp-allwidth/Rowmotion/GridRowmotion.lean#L8"
+            },
+            {
+              "name_as_declared": "gridLinearExtension_is_linear_extension",
+              "line": 51,
+              "url": "../formal/sharp-allwidth/Rowmotion/GridRowmotion.lean#L51"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionSharpAllWidth/ActualCounts.lean",
+          "sha256": "ebb4bfc46424672a3603a03d55881fcb694031ca3d9b791d4902a1cd4c56c6c2",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualCounts.lean",
+          "declarations": [
+            {
+              "name_as_declared": "actualTotalCount",
+              "line": 9,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualCounts.lean#L9"
+            },
+            {
+              "name_as_declared": "actualBadCount",
+              "line": 12,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualCounts.lean#L12"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": ""
+    },
+    {
+      "manuscript_location": "Theorem 1.1; equations (1)–(2)",
+      "tex_source": "sections/01-introduction.tex",
+      "alignment": "Unconditional fixed-width sharp exceptional count and proportion for m >= 2.",
+      "formal_modules": [
+        {
+          "path": "RowmotionSharpAllWidth/SharpTheorem.lean",
+          "sha256": "3ccbd2a8fa215ded5156e582c60b9a4c46ee16b4c7b1ec3eb25eaa5b0975aaa5",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/SharpTheorem.lean",
+          "declarations": [
+            {
+              "name_as_declared": "actualBadCount_sharp_asymptotic",
+              "line": 39,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/SharpTheorem.lean#L39"
+            },
+            {
+              "name_as_declared": "actualRowmotion_sharp_all_width",
+              "line": 51,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/SharpTheorem.lean#L51"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": "The only public mathematical hypotheses are m : Nat and 2 <= m. This certificate does not cover the separate width-one proposition."
+    },
+    {
+      "manuscript_location": "Section 2; actual global rule and ordinary translation",
+      "tex_source": "sections/02-endpoints.tex",
+      "alignment": "The global rule is proved from the toggle action and yields actual strict-endpoint translation.",
+      "formal_modules": [
+        {
+          "path": "Rowmotion/GlobalRuleProof.lean",
+          "sha256": "794f9859fd329bbfab3f1c3f1f6b25238328a78f015f2568b0f427fab98e87d4",
+          "url": "../formal/sharp-allwidth/Rowmotion/GlobalRuleProof.lean",
+          "declarations": [
+            {
+              "name_as_declared": "gridGlobalRule",
+              "line": 9,
+              "url": "../formal/sharp-allwidth/Rowmotion/GlobalRuleProof.lean#L9"
+            },
+            {
+              "name_as_declared": "rowmotion_eq_globalImage",
+              "line": 14,
+              "url": "../formal/sharp-allwidth/Rowmotion/GlobalRuleProof.lean#L14"
+            },
+            {
+              "name_as_declared": "rowmotion_strict_translation",
+              "line": 18,
+              "url": "../formal/sharp-allwidth/Rowmotion/GlobalRuleProof.lean#L18"
+            }
+          ]
+        },
+        {
+          "path": "Rowmotion/EndpointRule.lean",
+          "sha256": "123766cbaef3dbc093889a38521e4284f562ee7e76d9e5c46e4165b1ce997e58",
+          "url": "../formal/sharp-allwidth/Rowmotion/EndpointRule.lean",
+          "declarations": [
+            {
+              "name_as_declared": "EndpointRule",
+              "line": 8,
+              "url": "../formal/sharp-allwidth/Rowmotion/EndpointRule.lean#L8"
+            },
+            {
+              "name_as_declared": "endpointRule_shift",
+              "line": 13,
+              "url": "../formal/sharp-allwidth/Rowmotion/EndpointRule.lean#L13"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": "The written exposition credits the published global rule. The certificate proves its grid instance rather than adding the cited statement as an axiom."
+    },
+    {
+      "manuscript_location": "Lemma 3.1",
+      "tex_source": "sections/03-matching.tex",
+      "alignment": "Direct clear-cut matching decoder and injectivity.",
+      "formal_modules": [
+        {
+          "path": "RowmotionOneOverlap/DirectBridge.lean",
+          "sha256": "18235f39f30092151cae8bdec2949ed6cb754abc3174496c35412876314b75d5",
+          "url": "../formal/sharp-allwidth/RowmotionOneOverlap/DirectBridge.lean",
+          "declarations": [
+            {
+              "name_as_declared": "directMap_injective",
+              "line": 166,
+              "url": "../formal/sharp-allwidth/RowmotionOneOverlap/DirectBridge.lean#L166"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": ""
+    },
+    {
+      "manuscript_location": "Lemma 3.2(i); Appendix A.1",
+      "tex_source": "sections/A-local-waves.tex",
+      "alignment": "Ordinary passage with a passive close pair.",
+      "formal_modules": [
+        {
+          "path": "RowmotionOneOverlap/PassiveActual.lean",
+          "sha256": "1deb6ac82d90c4d18fda7b74958b44526998b82fe4e7dc67038af8aed3a997bb",
+          "url": "../formal/sharp-allwidth/RowmotionOneOverlap/PassiveActual.lean",
+          "declarations": [
+            {
+              "name_as_declared": "rowmotion_boundary_terminal",
+              "line": 298,
+              "url": "../formal/sharp-allwidth/RowmotionOneOverlap/PassiveActual.lean#L298"
+            },
+            {
+              "name_as_declared": "rowmotion_boundary_terminal_membership",
+              "line": 306,
+              "url": "../formal/sharp-allwidth/RowmotionOneOverlap/PassiveActual.lean#L306"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": ""
+    },
+    {
+      "manuscript_location": "Lemma 3.2(ii); Appendix A.2",
+      "tex_source": "sections/A-local-waves.tex",
+      "alignment": "Short-leaf phases and final row membership.",
+      "formal_modules": [
+        {
+          "path": "RowmotionOneOverlap/ShortLeafActual.lean",
+          "sha256": "379be190f24af7972b45cb8db50185f301efad4f838b8ca20a1b1ab00dac0384",
+          "url": "../formal/sharp-allwidth/RowmotionOneOverlap/ShortLeafActual.lean",
+          "declarations": [
+            {
+              "name_as_declared": "all_positive_phases",
+              "line": 106,
+              "url": "../formal/sharp-allwidth/RowmotionOneOverlap/ShortLeafActual.lean#L106"
+            },
+            {
+              "name_as_declared": "terminal_membership",
+              "line": 172,
+              "url": "../formal/sharp-allwidth/RowmotionOneOverlap/ShortLeafActual.lean#L172"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionOneOverlap/ShortLeafBridge.lean",
+          "sha256": "241741bfc16af697597c354a26da562da72dc1a40ed6b4231b0e1a7216e6be2c",
+          "url": "../formal/sharp-allwidth/RowmotionOneOverlap/ShortLeafBridge.lean",
+          "declarations": []
+        }
+      ],
+      "limits_or_route_difference": ""
+    },
+    {
+      "manuscript_location": "Lemma 3.2(ii)–(iii); Appendix A.3",
+      "tex_source": "sections/A-local-waves.tex",
+      "alignment": "Distinct-edge overlapping phases, terminal arrays and every middle clear cut.",
+      "formal_modules": [
+        {
+          "path": "RowmotionOneOverlap/DistinctEdgeTerminal.lean",
+          "sha256": "1618b68e7a112bc4511ab89f0c096b312fe278aa0f284b43bd0a9187ff3c1cb0",
+          "url": "../formal/sharp-allwidth/RowmotionOneOverlap/DistinctEdgeTerminal.lean",
+          "declarations": [
+            {
+              "name_as_declared": "all_phases",
+              "line": 19,
+              "url": "../formal/sharp-allwidth/RowmotionOneOverlap/DistinctEdgeTerminal.lean#L19"
+            },
+            {
+              "name_as_declared": "terminal_membership",
+              "line": 30,
+              "url": "../formal/sharp-allwidth/RowmotionOneOverlap/DistinctEdgeTerminal.lean#L30"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionOneOverlap/DistinctEdgeMiddleBridge.lean",
+          "sha256": "7013959ad7da5ff2ce9efd73818a55cebb2145e566b95b7cfff02861eb245fca",
+          "url": "../formal/sharp-allwidth/RowmotionOneOverlap/DistinctEdgeMiddleBridge.lean",
+          "declarations": [
+            {
+              "name_as_declared": "decodeWeak_distinctEdge_middle",
+              "line": 53,
+              "url": "../formal/sharp-allwidth/RowmotionOneOverlap/DistinctEdgeMiddleBridge.lean#L53"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionOneOverlap/DistinctEdgeArrays.lean",
+          "sha256": "65e7400d876812d1f4dab0d8b4820261315f5da488f6c5dc04b5089ff2f38dca",
+          "url": "../formal/sharp-allwidth/RowmotionOneOverlap/DistinctEdgeArrays.lean",
+          "declarations": []
+        }
+      ],
+      "limits_or_route_difference": "The expanded hand proof distinguishes original separation H from the residual H−2 after flipping, gives the complete cutoff cases, and derives the one-step recurrence. The frozen formal modules are unchanged."
+    },
+    {
+      "manuscript_location": "Proposition 3.3",
+      "tex_source": "sections/03-matching.tex",
+      "alignment": "Actual global matching embedding, clear-cut agreement, injectivity, equivariance and all return times.",
+      "formal_modules": [
+        {
+          "path": "RowmotionOneOverlap/ActualEmbedding.lean",
+          "sha256": "094b3a49e9a508714e8e2851d96172866d04a07575504334fd4266d58ae56b25",
+          "url": "../formal/sharp-allwidth/RowmotionOneOverlap/ActualEmbedding.lean",
+          "declarations": [
+            {
+              "name_as_declared": "actual_event_clear_transports",
+              "line": 8,
+              "url": "../formal/sharp-allwidth/RowmotionOneOverlap/ActualEmbedding.lean#L8"
+            },
+            {
+              "name_as_declared": "embed_eq_directMap",
+              "line": 13,
+              "url": "../formal/sharp-allwidth/RowmotionOneOverlap/ActualEmbedding.lean#L13"
+            },
+            {
+              "name_as_declared": "embed_equivariant",
+              "line": 20,
+              "url": "../formal/sharp-allwidth/RowmotionOneOverlap/ActualEmbedding.lean#L20"
+            },
+            {
+              "name_as_declared": "embed_injective",
+              "line": 25,
+              "url": "../formal/sharp-allwidth/RowmotionOneOverlap/ActualEmbedding.lean#L25"
+            },
+            {
+              "name_as_declared": "embed_same_return_times",
+              "line": 29,
+              "url": "../formal/sharp-allwidth/RowmotionOneOverlap/ActualEmbedding.lean#L29"
+            },
+            {
+              "name_as_declared": "embed_same_exact_periods",
+              "line": 34,
+              "url": "../formal/sharp-allwidth/RowmotionOneOverlap/ActualEmbedding.lean#L34"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": ""
+    },
+    {
+      "manuscript_location": "Lemma 4.1",
+      "tex_source": "sections/04-partitions.tex",
+      "alignment": "Gap-two boundary passage for the triple model.",
+      "formal_modules": [
+        {
+          "path": "RowmotionGapTwo/Dynamics.lean",
+          "sha256": "987c0eb336e83667f8e5b012a1f0b7885a05c04e7b930aa9c89603c0ab51262c",
+          "url": "../formal/sharp-allwidth/RowmotionGapTwo/Dynamics.lean",
+          "declarations": [
+            {
+              "name_as_declared": "rowmotion_terminal_membership",
+              "line": 286,
+              "url": "../formal/sharp-allwidth/RowmotionGapTwo/Dynamics.lean#L286"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionGapTwo/ActiveSeam.lean",
+          "sha256": "c33342104d23ae593c56fda5e05088072d00b5eab3b9f25707e516b8111805cb",
+          "url": "../formal/sharp-allwidth/RowmotionGapTwo/ActiveSeam.lean",
+          "declarations": []
+        },
+        {
+          "path": "RowmotionGapTwo/PassiveSeam.lean",
+          "sha256": "5148c1da2cd1799c098ce38e80d5d1b0a3ad44f9405f6ebeac76bc6ae9b2e169",
+          "url": "../formal/sharp-allwidth/RowmotionGapTwo/PassiveSeam.lean",
+          "declarations": []
+        }
+      ],
+      "limits_or_route_difference": ""
+    },
+    {
+      "manuscript_location": "Proposition 4.2",
+      "tex_source": "sections/04-partitions.tex",
+      "alignment": "Global sparse-triple embedding and exact-period preservation.",
+      "formal_modules": [
+        {
+          "path": "RowmotionGapTwo/PartitionEmbedding.lean",
+          "sha256": "45be2b51d3a3ad17f6d6d298468cf79cf998e11eb0276ef4c00d1b1685ca1ca0",
+          "url": "../formal/sharp-allwidth/RowmotionGapTwo/PartitionEmbedding.lean",
+          "declarations": [
+            {
+              "name_as_declared": "embed",
+              "line": 17,
+              "url": "../formal/sharp-allwidth/RowmotionGapTwo/PartitionEmbedding.lean#L17"
+            },
+            {
+              "name_as_declared": "embed_eq_directMap",
+              "line": 29,
+              "url": "../formal/sharp-allwidth/RowmotionGapTwo/PartitionEmbedding.lean#L29"
+            },
+            {
+              "name_as_declared": "embed_equivariant",
+              "line": 95,
+              "url": "../formal/sharp-allwidth/RowmotionGapTwo/PartitionEmbedding.lean#L95"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionGapTwo/PartitionInjectivity.lean",
+          "sha256": "06c83da28527820e6743d0a7d89f841d2b7ceb3d5824854f2b5354bc3dd5d069",
+          "url": "../formal/sharp-allwidth/RowmotionGapTwo/PartitionInjectivity.lean",
+          "declarations": [
+            {
+              "name_as_declared": "embed_injective",
+              "line": 43,
+              "url": "../formal/sharp-allwidth/RowmotionGapTwo/PartitionInjectivity.lean#L43"
+            },
+            {
+              "name_as_declared": "embed_same_return_times",
+              "line": 58,
+              "url": "../formal/sharp-allwidth/RowmotionGapTwo/PartitionInjectivity.lean#L58"
+            },
+            {
+              "name_as_declared": "embed_same_exact_periods",
+              "line": 64,
+              "url": "../formal/sharp-allwidth/RowmotionGapTwo/PartitionInjectivity.lean#L64"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": "The written proof uses a common-clear-cut argument for injection. The formal package additionally develops phase recovery."
+    },
+    {
+      "manuscript_location": "Lemma 4.3",
+      "tex_source": "sections/04-partitions.tex",
+      "alignment": "Global images are disjoint after a simultaneous clear rotation.",
+      "formal_modules": [
+        {
+          "path": "RowmotionModelDisjointness/CommonClearCut.lean",
+          "sha256": "68cf7ec14bf0618768d87a77b564e66c776f3ba70432381deeb9f866e5635cb5",
+          "url": "../formal/sharp-allwidth/RowmotionModelDisjointness/CommonClearCut.lean",
+          "declarations": []
+        },
+        {
+          "path": "RowmotionSharpAllWidth/GlobalDisjointness.lean",
+          "sha256": "d219d2662e7397ebf216bd5a8f9c4b9813906816246a8332e853fd4e8ffa27ef",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/GlobalDisjointness.lean",
+          "declarations": [
+            {
+              "name_as_declared": "matching_triple_global_disjoint_of_clear_agreement",
+              "line": 18,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/GlobalDisjointness.lean#L18"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionSharpAllWidth/SharpTheorem.lean",
+          "sha256": "3ccbd2a8fa215ded5156e582c60b9a4c46ee16b4c7b1ec3eb25eaa5b0975aaa5",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/SharpTheorem.lean",
+          "declarations": [
+            {
+              "name_as_declared": "actual_matching_triple_images_disjoint",
+              "line": 17,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/SharpTheorem.lean#L17"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": ""
+    },
+    {
+      "manuscript_location": "Lemma 5.1; Appendix B",
+      "tex_source": "sections/05-nonreturn.tex",
+      "alignment": "Actual passive, interior and top boundary events, with absence of earlier strict boundaries. The stated separation parameter is the minimum of the one-based left margin and unmarked consecutive gaps.",
+      "formal_modules": [
+        {
+          "path": "RowmotionBoundaryEvents/PassiveInteriorEvents.lean",
+          "sha256": "f466e572bfff5279260ff1070d727af4f88d7dae800f0df1a08df54611e14b0e",
+          "url": "../formal/sharp-allwidth/RowmotionBoundaryEvents/PassiveInteriorEvents.lean",
+          "declarations": [
+            {
+              "name_as_declared": "passive_event_exact",
+              "line": 10,
+              "url": "../formal/sharp-allwidth/RowmotionBoundaryEvents/PassiveInteriorEvents.lean#L10"
+            },
+            {
+              "name_as_declared": "interior_event_exact",
+              "line": 67,
+              "url": "../formal/sharp-allwidth/RowmotionBoundaryEvents/PassiveInteriorEvents.lean#L67"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionBoundaryEvents/TopEvents.lean",
+          "sha256": "aa869e4cc724479f6d4eb38c352b8a38af495580c4e899fe70c8982954d99755",
+          "url": "../formal/sharp-allwidth/RowmotionBoundaryEvents/TopEvents.lean",
+          "declarations": [
+            {
+              "name_as_declared": "top_event_exact",
+              "line": 70,
+              "url": "../formal/sharp-allwidth/RowmotionBoundaryEvents/TopEvents.lean#L70"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionBoundaryEvents/LocalMinimality.lean",
+          "sha256": "0aadca67fd194376bc2f48825cca43902049e2689297face2fa270e88f58a3a4",
+          "url": "../formal/sharp-allwidth/RowmotionBoundaryEvents/LocalMinimality.lean",
+          "declarations": [
+            {
+              "name_as_declared": "passive_actual_no_early_strict_boundary",
+              "line": 37,
+              "url": "../formal/sharp-allwidth/RowmotionBoundaryEvents/LocalMinimality.lean#L37"
+            },
+            {
+              "name_as_declared": "interior_actual_no_early_strict_boundary",
+              "line": 49,
+              "url": "../formal/sharp-allwidth/RowmotionBoundaryEvents/LocalMinimality.lean#L49"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionInteriorCollision/LowerWave.lean",
+          "sha256": "fdf4a260276ba7c7bc5a9c184bcb22087a786be3e38a4e9d3633d60faad32ea6",
+          "url": "../formal/sharp-allwidth/RowmotionInteriorCollision/LowerWave.lean",
+          "declarations": [
+            {
+              "name_as_declared": "actual_interior_terminal_membership",
+              "line": 307,
+              "url": "../formal/sharp-allwidth/RowmotionInteriorCollision/LowerWave.lean#L307"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionTopCollision/Actual.lean",
+          "sha256": "f7a9e7be870dee26739ba69a31ac8d11d10e10e5736f8e1624236d3e062058f1",
+          "url": "../formal/sharp-allwidth/RowmotionTopCollision/Actual.lean",
+          "declarations": []
+        }
+      ],
+      "limits_or_route_difference": ""
+    },
+    {
+      "manuscript_location": "Lemma 5.2; equations (12)–(16)",
+      "tex_source": "sections/05-nonreturn.tex",
+      "alignment": "Reduced-gap transport, mark drift, event-time potential and closed-segment telescoping.",
+      "formal_modules": [
+        {
+          "path": "RowmotionBoundaryGap/EventTransport.lean",
+          "sha256": "82818aa32bf8187e73a84b50473ac62cbeddab22d68db557b5808bd2d1832c02",
+          "url": "../formal/sharp-allwidth/RowmotionBoundaryGap/EventTransport.lean",
+          "declarations": [
+            {
+              "name_as_declared": "passive_reduced_event",
+              "line": 41,
+              "url": "../formal/sharp-allwidth/RowmotionBoundaryGap/EventTransport.lean#L41"
+            },
+            {
+              "name_as_declared": "interior_reduced_event",
+              "line": 53,
+              "url": "../formal/sharp-allwidth/RowmotionBoundaryGap/EventTransport.lean#L53"
+            },
+            {
+              "name_as_declared": "top_reduced_event",
+              "line": 64,
+              "url": "../formal/sharp-allwidth/RowmotionBoundaryGap/EventTransport.lean#L64"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionBoundaryGap/SuccessorGaps.lean",
+          "sha256": "d4806280cc8edf8293d75ce22a9882a4f2f39f0b957138199d4b8b89e4d12ad5",
+          "url": "../formal/sharp-allwidth/RowmotionBoundaryGap/SuccessorGaps.lean",
+          "declarations": [
+            {
+              "name_as_declared": "boundarySuccessor_transport",
+              "line": 63,
+              "url": "../formal/sharp-allwidth/RowmotionBoundaryGap/SuccessorGaps.lean#L63"
+            },
+            {
+              "name_as_declared": "boundarySuccessor_gap_next",
+              "line": 75,
+              "url": "../formal/sharp-allwidth/RowmotionBoundaryGap/SuccessorGaps.lean#L75"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionBoundaryGap/SuccessorPotential.lean",
+          "sha256": "b186cd83c73ba3bfe80fe7bca15f1a202c9e7ff5c59b085db58b178f864e04f9",
+          "url": "../formal/sharp-allwidth/RowmotionBoundaryGap/SuccessorPotential.lean",
+          "declarations": [
+            {
+              "name_as_declared": "boundarySuccessor_potential",
+              "line": 33,
+              "url": "../formal/sharp-allwidth/RowmotionBoundaryGap/SuccessorPotential.lean#L33"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionBANonreturn/Telescoping.lean",
+          "sha256": "988e773320711bf4f45ced9a11227753c219c6c3f77b6bfbd670f88b04e4bc05",
+          "url": "../formal/sharp-allwidth/RowmotionBANonreturn/Telescoping.lean",
+          "declarations": [
+            {
+              "name_as_declared": "mark_telescope",
+              "line": 26,
+              "url": "../formal/sharp-allwidth/RowmotionBANonreturn/Telescoping.lean#L26"
+            },
+            {
+              "name_as_declared": "potential_telescope",
+              "line": 42,
+              "url": "../formal/sharp-allwidth/RowmotionBANonreturn/Telescoping.lean#L42"
+            },
+            {
+              "name_as_declared": "no_baseline_at_bounded_event",
+              "line": 72,
+              "url": "../formal/sharp-allwidth/RowmotionBANonreturn/Telescoping.lean#L72"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": "Gap coordinates and endpoint-sum potential are alternate presentations of the same transport calculation; equation numbers do not assert literal expression identity with Lean syntax."
+    },
+    {
+      "manuscript_location": "Proposition 5.3",
+      "tex_source": "sections/05-nonreturn.tex",
+      "alignment": "Separated marked unit-gap chamber states do not return at the baseline.",
+      "formal_modules": [
+        {
+          "path": "RowmotionBANonreturn/ActualNonreturn.lean",
+          "sha256": "f7cb29a13a92506a0c4d5ccf1312fbe23879a314e16fb8f16db94351cd103a60",
+          "url": "../formal/sharp-allwidth/RowmotionBANonreturn/ActualNonreturn.lean",
+          "declarations": [
+            {
+              "name_as_declared": "no_baseline_return",
+              "line": 44,
+              "url": "../formal/sharp-allwidth/RowmotionBANonreturn/ActualNonreturn.lean#L44"
+            },
+            {
+              "name_as_declared": "oneDefect_no_baseline_return",
+              "line": 65,
+              "url": "../formal/sharp-allwidth/RowmotionBANonreturn/ActualNonreturn.lean#L65"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionChamberNonreturn/Nonreturn.lean",
+          "sha256": "eb8243c1b5c682564a16e450c806ca62023145ace1a31ae6688bf53c89c8b06b",
+          "url": "../formal/sharp-allwidth/RowmotionChamberNonreturn/Nonreturn.lean",
+          "declarations": [
+            {
+              "name_as_declared": "chamberState_no_baseline_return",
+              "line": 15,
+              "url": "../formal/sharp-allwidth/RowmotionChamberNonreturn/Nonreturn.lean#L15"
+            },
+            {
+              "name_as_declared": "floor_chamberState_no_baseline_return",
+              "line": 38,
+              "url": "../formal/sharp-allwidth/RowmotionChamberNonreturn/Nonreturn.lean#L38"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": ""
+    },
+    {
+      "manuscript_location": "Section 6; denominator expansion (18)",
+      "tex_source": "sections/06-counting.tex",
+      "alignment": "Total actual-state count including empty rows has the claimed first two terms.",
+      "formal_modules": [
+        {
+          "path": "RowmotionSharpAllWidth/ActualDenominatorCount.lean",
+          "sha256": "7f0c269291360f223aab48ed4665972f76c0e839b173c7161709fbda7186076d",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualDenominatorCount.lean",
+          "declarations": [
+            {
+              "name_as_declared": "actualNonemptyRowCount_exact_dyck",
+              "line": 740,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualDenominatorCount.lean#L740"
+            },
+            {
+              "name_as_declared": "actualNonemptyRowCount_two_term",
+              "line": 777,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualDenominatorCount.lean#L777"
+            },
+            {
+              "name_as_declared": "actualTotalCount_two_term",
+              "line": 799,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualDenominatorCount.lean#L799"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionSharpAllWidth/DenominatorCount.lean",
+          "sha256": "d91af091d73913f79434e7773bfc0c4cb1009c34e8a553c21d0769abef05e9be",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/DenominatorCount.lean",
+          "declarations": [
+            {
+              "name_as_declared": "actualNonempty_add_empty",
+              "line": 13,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/DenominatorCount.lean#L13"
+            },
+            {
+              "name_as_declared": "actualEmptyRow_asymptotic",
+              "line": 21,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/DenominatorCount.lean#L21"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": "The manuscript cites the published Narayana product for nonempty rows; the certificate instead proves a weak-endpoint/Dyck equivalence and its exact binomial sum. The common two-term consequence is certified, without claiming novelty for the older formula."
+    },
+    {
+      "manuscript_location": "Section 6; matching enumeration (19)",
+      "tex_source": "sections/06-counting.tex",
+      "alignment": "Exact raw matching count, marked adjacent-edge subtraction and one-overlap two-term asymptotic.",
+      "formal_modules": [
+        {
+          "path": "RowmotionSharpAllWidth/MatchingDyck.lean",
+          "sha256": "63518ce6d7759b0360d6f44ff16c6c37fd21b8dac77e96845b2c4f65adbe09f0",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/MatchingDyck.lean",
+          "declarations": [
+            {
+              "name_as_declared": "rawMatchingDyckSupportEquiv",
+              "line": 623,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/MatchingDyck.lean#L623"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionSharpAllWidth/AdjacentEnumeration.lean",
+          "sha256": "1f22e094f49aaf6a3323e1479d9ad05359b60b1db2633bb946851e150d2b5200",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/AdjacentEnumeration.lean",
+          "declarations": [
+            {
+              "name_as_declared": "markedAdjacent_card",
+              "line": 84,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/AdjacentEnumeration.lean#L84"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionSharpAllWidth/XExact.lean",
+          "sha256": "97ef648358a5f415b4c6643f150d79e9d475bca82af1dd795f6bda41fd9d29dd",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/XExact.lean",
+          "declarations": [
+            {
+              "name_as_declared": "oneOverlap_count_asymptotic",
+              "line": 9,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/XExact.lean#L9"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": ""
+    },
+    {
+      "manuscript_location": "Section 4 marked-valley correspondence; section 6 triple count (20)",
+      "tex_source": "sections/06-counting.tex",
+      "alignment": "Constructive sparse-triple/marked-valley equivalence and leading count.",
+      "formal_modules": [
+        {
+          "path": "RowmotionTripleRealization/PartitionEquivalence.lean",
+          "sha256": "fa25537df70795d36f748040726376dd50f55f4df0543f8ecf0516694c9ee23a",
+          "url": "../formal/sharp-allwidth/RowmotionTripleRealization/PartitionEquivalence.lean",
+          "declarations": [
+            {
+              "name_as_declared": "sparseTriplePartitionEquivParameters",
+              "line": 71,
+              "url": "../formal/sharp-allwidth/RowmotionTripleRealization/PartitionEquivalence.lean#L71"
+            },
+            {
+              "name_as_declared": "sparseTriplePartition_card",
+              "line": 78,
+              "url": "../formal/sharp-allwidth/RowmotionTripleRealization/PartitionEquivalence.lean#L78"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionDyckValleys/Coefficient.lean",
+          "sha256": "6a57d7b19666b4ac3bdcbe9bbdd9e1f8256018ca4f8a40ab8af9653428c1587c",
+          "url": "../formal/sharp-allwidth/RowmotionDyckValleys/Coefficient.lean",
+          "declarations": [
+            {
+              "name_as_declared": "normalized_valley_coefficient",
+              "line": 15,
+              "url": "../formal/sharp-allwidth/RowmotionDyckValleys/Coefficient.lean#L15"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionSharpAllWidth/CountEstimates.lean",
+          "sha256": "159b9593255a5ea460d70f71bc3598b1e8735f59757f3eb3d1ee906b7a038586",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/CountEstimates.lean",
+          "declarations": [
+            {
+              "name_as_declared": "sparseTriplePartition_count_asymptotic",
+              "line": 11,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/CountEstimates.lean#L11"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": ""
+    },
+    {
+      "manuscript_location": "Lemma 6.1",
+      "tex_source": "sections/06-counting.tex",
+      "alignment": "Proper-period losses count actual source states and have the required polynomial error.",
+      "formal_modules": [
+        {
+          "path": "RowmotionSharpAllWidth/ActualMatchingPeriodLoss.lean",
+          "sha256": "65614972dc766b956180130d0fecb7e4058681df0edfb8a5a1d3463a33281ccf",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualMatchingPeriodLoss.lean",
+          "declarations": [
+            {
+              "name_as_declared": "properPeriodMatching_card_bound",
+              "line": 94,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualMatchingPeriodLoss.lean#L94"
+            },
+            {
+              "name_as_declared": "properPeriodMatching_asymptotic",
+              "line": 121,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualMatchingPeriodLoss.lean#L121"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionSharpAllWidth/ActualPartitionPeriodLoss.lean",
+          "sha256": "f009908c065a5dcae4be8c3ff8cc8ea0c524ac24d6bae5d8612204c5a1f1bc13",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualPartitionPeriodLoss.lean",
+          "declarations": [
+            {
+              "name_as_declared": "properPeriodPartition_card_bound",
+              "line": 74,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualPartitionPeriodLoss.lean#L74"
+            },
+            {
+              "name_as_declared": "properPeriodPartition_asymptotic",
+              "line": 99,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualPartitionPeriodLoss.lean#L99"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": "The paper uses support-stabilizer subgroups; the formal proof uses a finite support-permutation encoding. Neither counts orbits or return-time witnesses, and neither introduces an extra factor of the circle length."
+    },
+    {
+      "manuscript_location": "Section 6; lower chamber count and final sandwich",
+      "tex_source": "sections/06-counting.tex",
+      "alignment": "Injective lower family, exact chamber cardinality and matching upper/lower asymptotics.",
+      "formal_modules": [
+        {
+          "path": "RowmotionGeneralChambers/MarkedChambers.lean",
+          "sha256": "ff2c3335fab51c6bf6a975b83f08ef2489f817cfee44d7e4a85764931c6d1ac0",
+          "url": "../formal/sharp-allwidth/RowmotionGeneralChambers/MarkedChambers.lean",
+          "declarations": [
+            {
+              "name_as_declared": "chamberState_injective",
+              "line": 110,
+              "url": "../formal/sharp-allwidth/RowmotionGeneralChambers/MarkedChambers.lean#L110"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionSharpAllWidth/ActualCounts.lean",
+          "sha256": "ebb4bfc46424672a3603a03d55881fcb694031ca3d9b791d4902a1cd4c56c6c2",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualCounts.lean",
+          "declarations": [
+            {
+              "name_as_declared": "actualChamberLower_le_bad",
+              "line": 32,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualCounts.lean#L32"
+            },
+            {
+              "name_as_declared": "actualChamberLower_exact",
+              "line": 46,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualCounts.lean#L46"
+            },
+            {
+              "name_as_declared": "actualChamberLower_asymptotic",
+              "line": 52,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/ActualCounts.lean#L52"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionSharpAllWidth/SharpTheorem.lean",
+          "sha256": "3ccbd2a8fa215ded5156e582c60b9a4c46ee16b4c7b1ec3eb25eaa5b0975aaa5",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/SharpTheorem.lean",
+          "declarations": [
+            {
+              "name_as_declared": "actualModelCountInequality_eventually",
+              "line": 28,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/SharpTheorem.lean#L28"
+            }
+          ]
+        },
+        {
+          "path": "RowmotionSharpAllWidth/CountEstimates.lean",
+          "sha256": "159b9593255a5ea460d70f71bc3598b1e8735f59757f3eb3d1ee906b7a038586",
+          "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/CountEstimates.lean",
+          "declarations": [
+            {
+              "name_as_declared": "actualRatio_from_model_inequality",
+              "line": 20,
+              "url": "../formal/sharp-allwidth/RowmotionSharpAllWidth/CountEstimates.lean#L20"
+            }
+          ]
+        }
+      ],
+      "limits_or_route_difference": ""
+    },
+    {
+      "manuscript_location": "Proposition 6.2; width one",
+      "tex_source": "sections/06-counting.tex",
+      "alignment": "Previously known consequence of Elder et al., arXiv:2307.08520v2, Theorem 3.2; the written nonadjacent-pair model rederives the needed bound.",
+      "formal_modules": [],
+      "limits_or_route_difference": "This attribution and the written rederivation are outside the sealed m >= 2 Lean theorem closure.",
+      "prior_work": {
+        "url": "https://arxiv.org/html/2307.08520v2#S3.SS1",
+        "theorem": "3.2",
+        "version": "v2"
+      }
+    }
+  ],
+  "verification": "The formal-file byte comparisons and declaration locations were inherited unchanged from the original source map. The remediation updated exposition/citation alignment and PDF binding, and did not rerun Lean or alter formal files. A separate current review checks the corrected mathematical exposition.",
+  "scope_limits": [
+    "Bibliographic priority, author identity and contribution claims are not Lean theorems.",
+    "The fixed-width theorem is for every fixed m >= 2, along all n tending to infinity; no uniform growing-width error bound is claimed.",
+    "No new Lean build or fresh-kernel replay was performed by the manuscript packager. The prior accepted review records those separate gates."
+  ],
+  "manuscript_pdf_sha256": "6d89cd5d14e68acc4a3ecf2b539e4eb30f40a35af80d26b666f1c1fff68d074d",
+  "manuscript_pages": 23
+}

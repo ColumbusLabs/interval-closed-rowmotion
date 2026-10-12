@@ -1,0 +1,72 @@
+name = "rowmotion_sharp_allwidth_final_review"
+version = "0.1.0"
+defaultTargets = ["RowmotionSharpAllWidthFinalReviewed"]
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "d13f23b723b8a846827a245b89c10fc7d3f11612"
+[[lean_lib]]
+name = "RowmotionSharpAllWidth"
+
+[[lean_lib]]
+name = "Rowmotion"
+
+[[lean_lib]]
+name = "RowmotionDyckValleys"
+
+[[lean_lib]]
+name = "RowmotionGeneralSimplex"
+
+[[lean_lib]]
+name = "RowmotionGeneralChambers"
+
+[[lean_lib]]
+name = "RowmotionInvariantSupport"
+
+[[lean_lib]]
+name = "RowmotionOneOverlap"
+
+[[lean_lib]]
+name = "RowmotionGapTwo"
+
+[[lean_lib]]
+name = "RowmotionGeneralDiscard"
+
+[[lean_lib]]
+name = "RowmotionSharpCounting"
+
+[[lean_lib]]
+name = "RowmotionCounting"
+
+[[lean_lib]]
+name = "RowmotionBANonreturn"
+
+[[lean_lib]]
+name = "RowmotionBoundaryEvents"
+
+[[lean_lib]]
+name = "RowmotionBoundaryGap"
+
+[[lean_lib]]
+name = "RowmotionBoundaryMechanism"
+
+[[lean_lib]]
+name = "RowmotionChamberNonreturn"
+
+[[lean_lib]]
+name = "RowmotionInteriorCollision"
+
+[[lean_lib]]
+name = "RowmotionOptional"
+
+[[lean_lib]]
+name = "RowmotionTopCollision"
+
+[[lean_lib]]
+name = "RowmotionTripleRealization"
+
+[[lean_lib]]
+name = "RowmotionModelDisjointness"
+
+[[lean_lib]]
+name = "RowmotionSharpAllWidthFinalReviewed"

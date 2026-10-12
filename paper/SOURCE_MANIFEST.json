@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "entrypoint": "rowmotion.tex",
+  "files": [
+    {
+      "path": "references.bib",
+      "bytes": 1717,
+      "sha256": "2a49131268cdf6d81bc61a188a863f538542409153bc9377cd8d7a7b6a99a8b6"
+    },
+    {
+      "path": "rowmotion.bbl",
+      "bytes": 1467,
+      "sha256": "c7a755f51b3fabacfced5fc6373a40784522931d91798f793229e7531649aebd"
+    },
+    {
+      "path": "rowmotion.tex",
+      "bytes": 3818,
+      "sha256": "48f3b014093a6c1f72bd97aff7f4ae49e7b068bf60d211db9c8b0b9a4d271916"
+    },
+    {
+      "path": "sections/01-introduction.tex",
+      "bytes": 4819,
+      "sha256": "1213df79fcf642a57756623dd45ac3f54cb6a4a1a65698c693c5fd2a0db8ecf6"
+    },
+    {
+      "path": "sections/02-endpoints.tex",
+      "bytes": 3121,
+      "sha256": "b14effe7115703f71cb07e2f4a0014a989f18ddfd0b6613e95d757425403c62c"
+    },
+    {
+      "path": "sections/03-matching.tex",
+      "bytes": 6398,
+      "sha256": "fc2247259804a9cfa16c36b18c159220599016fc226a5e6b659c9352f8762a02"
+    },
+    {
+      "path": "sections/04-partitions.tex",
+      "bytes": 5508,
+      "sha256": "c2dfe048944ebed3ecbb4cf41248057c19446f497ce4e23b509a5c1e5d139120"
+    },
+    {
+      "path": "sections/05-nonreturn.tex",
+      "bytes": 9711,
+      "sha256": "af706772c7b9cdc7750378900d8b8c5d7506b5d9a0bfc596b37dc41b1a4a8541"
+    },
+    {
+      "path": "sections/06-counting.tex",
+      "bytes": 6816,
+      "sha256": "82ab22131cb6515f04023a2999aa8f1701de1821c818ebddee02567ed0c65c19"
+    },
+    {
+      "path": "sections/07-certification.tex",
+      "bytes": 3404,
+      "sha256": "5b3dbdf1043ee331b9228455f6208d49d86a89b0e4ff5ef238dea97e016da45a"
+    },
+    {
+      "path": "sections/A-local-waves.tex",
+      "bytes": 17641,
+      "sha256": "cf7c9522f92870b10900506463ecf7ca800606bf8c932117f7e68bd2b63cb7ed"
+    },
+    {
+      "path": "sections/B-unit-collisions.tex",
+      "bytes": 5209,
+      "sha256": "8b997a63ea1caea0a0c46f962acf22749de34d73ae6ccb446d0ce8a910846f52"
+    }
+  ]
+}

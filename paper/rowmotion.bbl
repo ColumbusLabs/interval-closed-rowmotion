@@ -1,0 +1,35 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{ELM{\etalchar{+}}24}
+
+\bibitem[ELL{\etalchar{+}}26]{ELLMSW}
+Sergi Elizalde, Nadia Lafreni\`ere, Joel~Brewster Lewis, Erin McNicholas,
+  Jessica Striker, and Amanda Welch.
+\newblock Enumeration of interval-closed sets via {Motzkin} paths and
+  quarter-plane walks.
+\newblock {\em Journal of Combinatorics}, 17(4):527--557, 2026.
+\newblock Theorem numbering cited from arXiv:2412.16368v1, Theorem 2.7; journal
+  DOI:
+  \href{https://doi.org/10.4310/JOC.260511231044}{10.4310/JOC.260511231044}.
+
+\bibitem[ELM{\etalchar{+}}24]{ELMSW}
+Jennifer Elder, Nadia Lafreni\`ere, Erin McNicholas, Jessica Striker, and
+  Amanda Welch.
+\newblock Toggling, rowmotion, and homomesy on interval-closed sets.
+\newblock {\em Journal of Combinatorics}, 15(4):479--528, 2024.
+\newblock Theorem numbering cited from arXiv:2307.08520v2, including Theorems
+  3.2 and 4.4.
+
+\bibitem[LLM{\etalchar{+}}25]{LLMSW}
+Nadia Lafreni\`ere, Joel~Brewster Lewis, Erin McNicholas, Jessica Striker, and
+  Amanda Welch.
+\newblock Interval-closed set rowmotion and homomesy on products of two chains.
+\newblock {\em arXiv preprint arXiv:2505.04000v1}, 2025.
+\newblock Version 1, submitted 6 May 2025; Conjecture 4.1 and Theorem 1.1.
+
+\bibitem[SW12]{SW}
+Jessica Striker and Nathan Williams.
+\newblock Promotion and rowmotion.
+\newblock {\em European Journal of Combinatorics}, 33(8):1919--1942, 2012.
+\newblock arXiv:1108.1172.
+
+\end{thebibliography}

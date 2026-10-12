@@ -1,0 +1,907 @@
+{
+  "schema_version": 1,
+  "mathematical_module_count": 225,
+  "principal_theorem": "RowmotionSharpAllWidth.actualRowmotion_sharp_all_width",
+  "files": [
+    {
+      "path": "Rowmotion/BoundaryData.lean",
+      "sha256": "b58fc874c895d7d430d874e7d2e2af20a9fdce2e30e013fa9c0941ad45875a32"
+    },
+    {
+      "path": "Rowmotion/BoundaryDynamics.lean",
+      "sha256": "5b3251bd9eaa309b0c272b85eb4b221a15bc1c50e5e249c689f62d13e0381aab"
+    },
+    {
+      "path": "Rowmotion/BoundaryFirstStep.lean",
+      "sha256": "98624c0a2352bace6204ac909daea0d6908e77a087c1cf7ce501d97c123afd38"
+    },
+    {
+      "path": "Rowmotion/BoundaryInitialDynamics.lean",
+      "sha256": "ab41f8bda4da6d8d6b9d34a56fc94d5d59e29a83b32f5955b0ff63866c738d34"
+    },
+    {
+      "path": "Rowmotion/BoundaryInput.lean",
+      "sha256": "467135822cc215e273b801e5ca34e0b7dfa8bdb796c22f44db45b347736a1b59"
+    },
+    {
+      "path": "Rowmotion/BoundaryLocalStep.lean",
+      "sha256": "65dbb9cd716a46a4662e9bcea2d7cc3bdc95f2d2ce77fc5ce8430e0033b90c59"
+    },
+    {
+      "path": "Rowmotion/BoundaryPhases.lean",
+      "sha256": "5ca1ec4cde9c3b6b316fb99907e990b313fbe9ca64e6a6eed2154a5cfee8daf3"
+    },
+    {
+      "path": "Rowmotion/BoundaryRecurrence.lean",
+      "sha256": "569d9995d869926b6d1b5cdeae19698b5e6b876f4acd9742d8a88d4b33dd6847"
+    },
+    {
+      "path": "Rowmotion/BoundaryShape.lean",
+      "sha256": "60b5ce7d38b745c7763550f9b42d4dce5da284bb4d9ece326f1f169e90f66cd8"
+    },
+    {
+      "path": "Rowmotion/BoundaryValidity.lean",
+      "sha256": "a8bca08602654cb05127a80e5b721671aaa23d6f69b7a671fab293b5b3b84c63"
+    },
+    {
+      "path": "Rowmotion/CircularMatching.lean",
+      "sha256": "de628f798271d5937a4d40e15c653ad0909a23c91cdd431ed04406011e45123f"
+    },
+    {
+      "path": "Rowmotion/EmbeddingReturns.lean",
+      "sha256": "2d4e4d06d76e56307c92a229d7ce38309e8b465531f4168bad685df197d39155"
+    },
+    {
+      "path": "Rowmotion/EndpointRule.lean",
+      "sha256": "123766cbaef3dbc093889a38521e4284f562ee7e76d9e5c46e4165b1ce997e58"
+    },
+    {
+      "path": "Rowmotion/Endpoints.lean",
+      "sha256": "01d16482f37c220b3d3dbd5f385ef6cff50b52960ef107184e6f906bc89bd37f"
+    },
+    {
+      "path": "Rowmotion/GlobalImageProperties.lean",
+      "sha256": "5d39ed551fa9681d8adb58e6944351b47087c75bcb70421401685d0102f547cb"
+    },
+    {
+      "path": "Rowmotion/GlobalRule.lean",
+      "sha256": "7828f677165fa4f38c5d70336869823da4bdd1825ae28e3bc8f949c10c9357c6"
+    },
+    {
+      "path": "Rowmotion/GlobalRuleProof.lean",
+      "sha256": "794f9859fd329bbfab3f1c3f1f6b25238328a78f015f2568b0f427fab98e87d4"
+    },
+    {
+      "path": "Rowmotion/GridRowmotion.lean",
+      "sha256": "83e71a84c327bff62a9e753284cec42582e6800f3a4d08aaba468d18089662af"
+    },
+    {
+      "path": "Rowmotion/IntegerEndpoints.lean",
+      "sha256": "e17d270d6e02f80cf78283c69b59b72ce3db8aca8ac2d9537f642b0b1c4fe0b3"
+    },
+    {
+      "path": "Rowmotion/LocalRule.lean",
+      "sha256": "6e0d5715345b54665d8574c351822fc46a89dbd8928293c727a44f38dfd6193d"
+    },
+    {
+      "path": "Rowmotion/MatchingAperiodicity.lean",
+      "sha256": "917ac8ac5c8c5b3322ed19008eb56cc7c5e73986461309bbc2b01e48e6bc3248"
+    },
+    {
+      "path": "Rowmotion/MatchingBridge.lean",
+      "sha256": "bc41cfeeef27cd5634d8771b02c9c2685c2721ac1f678d99ee95d5af003670a8"
+    },
+    {
+      "path": "Rowmotion/MatchingCircularTime.lean",
+      "sha256": "472716241f8c2598b459e9ead7e87bec788a89119253a8575c6ac1a63468227c"
+    },
+    {
+      "path": "Rowmotion/MatchingDecoder.lean",
+      "sha256": "cec42eb7854a2f849a0a927dbf4a569e6f6e4b8b0b5bc9d3ff0702f91a49720c"
+    },
+    {
+      "path": "Rowmotion/MatchingEmbedding.lean",
+      "sha256": "5ade3edeb08e483433a9457647a3ed230fb2e672c047688d99a46d2dece70b12"
+    },
+    {
+      "path": "Rowmotion/MatchingEncoding.lean",
+      "sha256": "683f4147bf10c59fe47abee4a6b85c04ae84185d84588406de726041ec8ad570"
+    },
+    {
+      "path": "Rowmotion/MatchingInterior.lean",
+      "sha256": "60efb9e6b40b01b8de93fa23b92aecd6d7ca2674b68fb823bcad5e6819d05a75"
+    },
+    {
+      "path": "Rowmotion/MatchingPhases.lean",
+      "sha256": "4b20760ff0874163ee04cddc556e26ef5ada9910c7926febdf5f9b7706e36136"
+    },
+    {
+      "path": "Rowmotion/MatchingReroot.lean",
+      "sha256": "0d9cd19657028832f0562984f8caec31677a5ef7330d4ce7e4f5eb9daf51d148"
+    },
+    {
+      "path": "Rowmotion/MatchingSeam.lean",
+      "sha256": "3791251d6e7600f458877068cf2f599aee59d38d53660657cbe116a921dd838b"
+    },
+    {
+      "path": "Rowmotion/OrderedVertices.lean",
+      "sha256": "44d5ed6fb066d5b5d335c11eef049bf1a409da53d691ebe008967d29248f076e"
+    },
+    {
+      "path": "Rowmotion/RowmotionConsequences.lean",
+      "sha256": "144c0c4cef5270fe0a1302789eb365b26f375bf24866f578551c0420a4aed8d6"
+    },
+    {
+      "path": "Rowmotion/SweepLocality.lean",
+      "sha256": "27093b87e7baf6e679f2fb47d03ec885e9e0688c5e6ab7ff1fa3958a6eeabbeb"
+    },
+    {
+      "path": "Rowmotion/Toggle.lean",
+      "sha256": "ea1c524bb90f77138fd94ddd822dff98630a473b2e1de4a949c8fc521d88004e"
+    },
+    {
+      "path": "Rowmotion/ToggleCriteria.lean",
+      "sha256": "8b0f880938fff5bbe7f62bde53dab5f0ec94e837f30e51f3dc830b1bad17884e"
+    },
+    {
+      "path": "RowmotionBANonreturn/ActualNonreturn.lean",
+      "sha256": "f7cb29a13a92506a0c4d5ccf1312fbe23879a314e16fb8f16db94351cd103a60"
+    },
+    {
+      "path": "RowmotionBANonreturn/BoundaryRun.lean",
+      "sha256": "1e5d8fde86f0253481f933d612827fea8b652ef821ea90172efa6a580af630a8"
+    },
+    {
+      "path": "RowmotionBANonreturn/EndpointRecovery.lean",
+      "sha256": "2d65f6872a30918345473baa20d041f48849d6c89a086d7b50228056aa8e69dc"
+    },
+    {
+      "path": "RowmotionBANonreturn/GapHorizon.lean",
+      "sha256": "975a1f628a83de6396600b71e51b3bb532f026d9ea914397b3a4388eaad6b7a3"
+    },
+    {
+      "path": "RowmotionBANonreturn/Telescoping.lean",
+      "sha256": "988e773320711bf4f45ced9a11227753c219c6c3f77b6bfbd670f88b04e4bc05"
+    },
+    {
+      "path": "RowmotionBoundaryEvents/EventCore.lean",
+      "sha256": "235a0b0f99c5f78217de0eb7b5a074dbfd2b808f7f50abda0799e0aad545a8d9"
+    },
+    {
+      "path": "RowmotionBoundaryEvents/Input.lean",
+      "sha256": "ff8cb422caa8e8401e8aeb8fe1818df060d207bfb45d2941557ee5806a7876b7"
+    },
+    {
+      "path": "RowmotionBoundaryEvents/LocalMinimality.lean",
+      "sha256": "0aadca67fd194376bc2f48825cca43902049e2689297face2fa270e88f58a3a4"
+    },
+    {
+      "path": "RowmotionBoundaryEvents/MarkDrift.lean",
+      "sha256": "14f525858b3878f043fceeb165b17ee8c56276779e15d832e27301340a43d205"
+    },
+    {
+      "path": "RowmotionBoundaryEvents/PassiveInteriorEvents.lean",
+      "sha256": "f466e572bfff5279260ff1070d727af4f88d7dae800f0df1a08df54611e14b0e"
+    },
+    {
+      "path": "RowmotionBoundaryEvents/Successor.lean",
+      "sha256": "1422a1714e5f9381d146eba5d68796cf09176515ef88a7cc72f491cf237b6a3b"
+    },
+    {
+      "path": "RowmotionBoundaryEvents/TerminalGeometry.lean",
+      "sha256": "4b6c7ed86e47e9d8c353632d7decfb87e660fa9e14f565d4482abad7c4b6af26"
+    },
+    {
+      "path": "RowmotionBoundaryEvents/TerminalShift.lean",
+      "sha256": "6b89bbed802e336f49a83f003c10d61d8769eff4ab561a14096363551808f188"
+    },
+    {
+      "path": "RowmotionBoundaryEvents/TopEvents.lean",
+      "sha256": "aa869e4cc724479f6d4eb38c352b8a38af495580c4e899fe70c8982954d99755"
+    },
+    {
+      "path": "RowmotionBoundaryEvents/TopTerminalGeometry.lean",
+      "sha256": "4772dbcc69ea7fa53a278f969255406a60cb72d4ec0dec6e104f0f5f30fcb1a3"
+    },
+    {
+      "path": "RowmotionBoundaryEvents/Translation.lean",
+      "sha256": "85e153d531e03936b1f5fc516c5cae1ac16db6e5725d2576906c0202188b42ee"
+    },
+    {
+      "path": "RowmotionBoundaryGap/CyclicAccumulation.lean",
+      "sha256": "a7321c04199bbde2b68ae655b18998aab75ad37733a1ff4602cbfeee94a49ffd"
+    },
+    {
+      "path": "RowmotionBoundaryGap/EndpointTransport.lean",
+      "sha256": "499bc79d1f7d7c6787d247ef1f56ccdb528d3bc0f90fa494d5a998b64533258b"
+    },
+    {
+      "path": "RowmotionBoundaryGap/EventTransport.lean",
+      "sha256": "82818aa32bf8187e73a84b50473ac62cbeddab22d68db557b5808bd2d1832c02"
+    },
+    {
+      "path": "RowmotionBoundaryGap/Potential.lean",
+      "sha256": "86c9eb86b7d01f7ee384ab21429fa5055deb02a3f609c9cf8767785cec79a665"
+    },
+    {
+      "path": "RowmotionBoundaryGap/ReducedCoordinates.lean",
+      "sha256": "9f79378033b039761a91b93cf837b5c901ab3a6abb6e754736df53961106c97a"
+    },
+    {
+      "path": "RowmotionBoundaryGap/SortedTransport.lean",
+      "sha256": "d4aa82fdd97c8baff427956db136da97702bc1c5b0e4515fc914bcf784e25851"
+    },
+    {
+      "path": "RowmotionBoundaryGap/SuccessorGaps.lean",
+      "sha256": "d4806280cc8edf8293d75ce22a9882a4f2f39f0b957138199d4b8b89e4d12ad5"
+    },
+    {
+      "path": "RowmotionBoundaryGap/SuccessorPotential.lean",
+      "sha256": "b186cd83c73ba3bfe80fe7bca15f1a202c9e7ff5c59b085db58b178f864e04f9"
+    },
+    {
+      "path": "RowmotionBoundaryMechanism/Actual.lean",
+      "sha256": "d0017a75c679cc9a401a2cd49e356ee989308ab596225772fc465a4eab1a682d"
+    },
+    {
+      "path": "RowmotionBoundaryMechanism/BoundaryData.lean",
+      "sha256": "6aa0710c01464438ed2ccf0b4393ce367cefec216c61ab9a2452a3b8cd5681dc"
+    },
+    {
+      "path": "RowmotionBoundaryMechanism/BoundaryDynamics.lean",
+      "sha256": "959ca411f058cf990e92768b9c88433763a8735dcbbede7b452c40f272870916"
+    },
+    {
+      "path": "RowmotionBoundaryMechanism/BoundaryInitialDynamics.lean",
+      "sha256": "43fd1277d0fd593277a40cbceab4aa7aaf5173f06e2bfdfa81c05e1a40fec69e"
+    },
+    {
+      "path": "RowmotionBoundaryMechanism/BoundaryShape.lean",
+      "sha256": "e15af90bbe8a23f4dc5f75f3ea4618eafb62bb10e64927a10a2c1b2685c10c8a"
+    },
+    {
+      "path": "RowmotionBoundaryMechanism/Passive.lean",
+      "sha256": "8e241276dc7e7af79ef84f18cbea4186baeeb8bad51634a500d912b62db15513"
+    },
+    {
+      "path": "RowmotionChamberNonreturn/Boundary.lean",
+      "sha256": "4dca3bc3ef275b9e5a0aa61f72bb594f2d6829b45830f02ae853920cd555584d"
+    },
+    {
+      "path": "RowmotionChamberNonreturn/Geometry.lean",
+      "sha256": "460bfb5aa88d80e3a55728df9de0d8d407d0f6a96b880512c1e5e87cfa6c8aff"
+    },
+    {
+      "path": "RowmotionChamberNonreturn/Nonreturn.lean",
+      "sha256": "eb8243c1b5c682564a16e450c806ca62023145ace1a31ae6688bf53c89c8b06b"
+    },
+    {
+      "path": "RowmotionCounting/RowEncoding.lean",
+      "sha256": "b88424337121ae4cc6b05e50853066b781135d76190aa2c583b6ab599789bd07"
+    },
+    {
+      "path": "RowmotionDyckValleys/ChamberParameters.lean",
+      "sha256": "e5b23880945ea94fc8907b7d6c52564322de785bda081ea066910e0de80432cc"
+    },
+    {
+      "path": "RowmotionDyckValleys/Coefficient.lean",
+      "sha256": "6a57d7b19666b4ac3bdcbe9bbdd9e1f8256018ca4f8a40ab8af9653428c1587c"
+    },
+    {
+      "path": "RowmotionDyckValleys/DyckValleys.lean",
+      "sha256": "69770463aa4f5c7dc92153bd398124dc2c69417b77faf57fe926ee3fec98f97d"
+    },
+    {
+      "path": "RowmotionDyckValleys/MarkedValleys.lean",
+      "sha256": "5dd36dc663f26bfecc8d976c0bbbedc8c91b48cb583d13ef92296eaaf3565593"
+    },
+    {
+      "path": "RowmotionDyckValleys/TreeValleys.lean",
+      "sha256": "c1141f8b01a9310d1997cdfeebd53f44d0b9a2d0837183a52daf3754090478e8"
+    },
+    {
+      "path": "RowmotionGapTwo/ActiveBoundary.lean",
+      "sha256": "2b776cbfac2b43caef04707df26098dbc1440dac607e79d9f1dfbaab5416c310"
+    },
+    {
+      "path": "RowmotionGapTwo/ActiveSeam.lean",
+      "sha256": "c33342104d23ae593c56fda5e05088072d00b5eab3b9f25707e516b8111805cb"
+    },
+    {
+      "path": "RowmotionGapTwo/AllSeams.lean",
+      "sha256": "7eed6c83501d50133a021c958ac9233c73c20bbfe4937a2c075bef3ac3aeea1c"
+    },
+    {
+      "path": "RowmotionGapTwo/BoundaryPhase.lean",
+      "sha256": "8ce9caae95ed1d58bd3628844d98d3940c6297861db0b928e20aa7a8bd950c3b"
+    },
+    {
+      "path": "RowmotionGapTwo/BoundaryRanks.lean",
+      "sha256": "e92dab9c5187a6c6dfba5983d436811fc183dd5ccd657d4870ee38e348f4d36f"
+    },
+    {
+      "path": "RowmotionGapTwo/ChainListing.lean",
+      "sha256": "0602e026f645a3e7db6308e03e3e63119165748f6c2bb3b00c1ac6ccf747f406"
+    },
+    {
+      "path": "RowmotionGapTwo/CircularPartition.lean",
+      "sha256": "0295baeb3ea42f8b6fcae1fa2477b3f913134a5ac077ef2786c34fd3d7b20cb7"
+    },
+    {
+      "path": "RowmotionGapTwo/DirectBridge.lean",
+      "sha256": "c82e9318709ccce156ff9d3fca05f2ea2a384677a3197f76f5a9248094a1155f"
+    },
+    {
+      "path": "RowmotionGapTwo/Dynamics.lean",
+      "sha256": "987c0eb336e83667f8e5b012a1f0b7885a05c04e7b930aa9c89603c0ab51262c"
+    },
+    {
+      "path": "RowmotionGapTwo/EndpointData.lean",
+      "sha256": "5fa5ffcf6dea47d566c28c01dedf3dbc31441c8af3301d652dd47f94f2605503"
+    },
+    {
+      "path": "RowmotionGapTwo/Geometry.lean",
+      "sha256": "8d9bf639f1cf1fb194862e63501bfa76f5c1876bf39236edbd05d8aac6992ee3"
+    },
+    {
+      "path": "RowmotionGapTwo/Initial.lean",
+      "sha256": "8a9ec9410c2e899f3d74b88105dcfc0095f297851316d88528c54dc451a2c785"
+    },
+    {
+      "path": "RowmotionGapTwo/LocalStep.lean",
+      "sha256": "945f21750bcef977362d3d96aaa85d77357c5f8636053ef8c673b840202dc845"
+    },
+    {
+      "path": "RowmotionGapTwo/PartitionCircularTime.lean",
+      "sha256": "a8106079574b35410436bc5ec74ca90f9c0b1ebe7eb05d08561a3f55b7f3a76b"
+    },
+    {
+      "path": "RowmotionGapTwo/PartitionDirect.lean",
+      "sha256": "d2f6f382f82e6820fdeaaf7b429e653f86da1e8863de7c217482441799c67f7c"
+    },
+    {
+      "path": "RowmotionGapTwo/PartitionEmbedding.lean",
+      "sha256": "45be2b51d3a3ad17f6d6d298468cf79cf998e11eb0276ef4c00d1b1685ca1ca0"
+    },
+    {
+      "path": "RowmotionGapTwo/PartitionInjectivity.lean",
+      "sha256": "06c83da28527820e6743d0a7d89f841d2b7ceb3d5824854f2b5354bc3dd5d069"
+    },
+    {
+      "path": "RowmotionGapTwo/PartitionInterior.lean",
+      "sha256": "d191273797c4d4f000db26105d262560162695559db46693313eeee72e74e1e6"
+    },
+    {
+      "path": "RowmotionGapTwo/PartitionPhases.lean",
+      "sha256": "b2963543261b7945efbcd694317c5074fbebc9831cc1421c63d60e3837c17ddf"
+    },
+    {
+      "path": "RowmotionGapTwo/PartitionReroot.lean",
+      "sha256": "bd79bfcdd79185718deb1263928531daec13d4e120e00253dfe8737447c8c251"
+    },
+    {
+      "path": "RowmotionGapTwo/PartitionRoles.lean",
+      "sha256": "b020250917b324fc37b8f1879938d823a22927072da257afa703394bf5f9a986"
+    },
+    {
+      "path": "RowmotionGapTwo/PartitionSeam.lean",
+      "sha256": "a18f121f77c2bd096ccac81b33c46a8d0a833964693d0ad33a8e499e30948b5b"
+    },
+    {
+      "path": "RowmotionGapTwo/PartitionSupport.lean",
+      "sha256": "0325adbe5557170ceae21c5d929bb58b1d78f4f47cf7d531a4c0e2e663420010"
+    },
+    {
+      "path": "RowmotionGapTwo/PassiveSeam.lean",
+      "sha256": "5148c1da2cd1799c098ce38e80d5d1b0a3ad44f9405f6ebeac76bc6ae9b2e169"
+    },
+    {
+      "path": "RowmotionGapTwo/Phases.lean",
+      "sha256": "16a38b5206e6f1308270e915e465486cfc5241d3e8ffa0fc5073fe581f91b4c3"
+    },
+    {
+      "path": "RowmotionGapTwo/RankSwitch.lean",
+      "sha256": "0ffaf6412c5ba76d8c660e39762c448e57a73444f9ae03421f668cbf3ef6f9fd"
+    },
+    {
+      "path": "RowmotionGapTwo/Recovery.lean",
+      "sha256": "2560165d5b8ed211c0e7c886d78f541cf43a0c8feace748ca34f2aabcb5110ad"
+    },
+    {
+      "path": "RowmotionGapTwo/RoleReconstruction.lean",
+      "sha256": "a6008ecfebe31128dc78f8448c0f19461f4dd74182ebdb4dee97204314a4c13b"
+    },
+    {
+      "path": "RowmotionGapTwo/SortedRoles.lean",
+      "sha256": "b46b11c5ce7fb9a6f6f578bb1da1741ff25c4c7ce1182bfee6d5ad7eea4254a8"
+    },
+    {
+      "path": "RowmotionGeneralChambers/Coordinates.lean",
+      "sha256": "94ded612d4079c8a8b94a5d438f3808ea5793c96d526b1c53bc3e99c7f516d1f"
+    },
+    {
+      "path": "RowmotionGeneralChambers/MarkedChambers.lean",
+      "sha256": "ff2c3335fab51c6bf6a975b83f08ef2489f817cfee44d7e4a85764931c6d1ac0"
+    },
+    {
+      "path": "RowmotionGeneralChambers/Occurrences.lean",
+      "sha256": "fedb20fe7b8dc50ecb7d5cd4da20724a2db5bb39b5559a320791706c7a15bdff"
+    },
+    {
+      "path": "RowmotionGeneralChambers/PhysicalGaps.lean",
+      "sha256": "4cab2469fc315a6dc942010f018bdf00f16469174e5d9b4751139fcb874d6078"
+    },
+    {
+      "path": "RowmotionGeneralChambers/StrictStates.lean",
+      "sha256": "e9eb10a63bf394b41ab39c937e7a9deed23f32591092ea4fbcdd5b81fcab0943"
+    },
+    {
+      "path": "RowmotionGeneralDiscard/StateGapEncoding.lean",
+      "sha256": "b07264c3a0c0fd8719533b1bd2009583ef38b29b07b76a010ea6cda10712dd17"
+    },
+    {
+      "path": "RowmotionGeneralDiscard/TwoSmallGaps.lean",
+      "sha256": "e2584ccb18bb13db5290fa362bab9f9143ea6cc2fac0722912235390279161d1"
+    },
+    {
+      "path": "RowmotionGeneralSimplex/GeneralSimplex.lean",
+      "sha256": "df4d727a5a0ba491ea8063bde476bd9e5d78659b7918357b0bb82567ac456ef1"
+    },
+    {
+      "path": "RowmotionInteriorCollision/Geometry.lean",
+      "sha256": "8cc4428196e4b844c879bf41d9c43a7eeca8622312e0bdcded2a214dfbe8a84b"
+    },
+    {
+      "path": "RowmotionInteriorCollision/LowerWave.lean",
+      "sha256": "fdf4a260276ba7c7bc5a9c184bcb22087a786be3e38a4e9d3633d60faad32ea6"
+    },
+    {
+      "path": "RowmotionInteriorCollision/SingleHole.lean",
+      "sha256": "9559e72de09d0ba456609c279b33c4e146e923390a486ed39459c2adf022f312"
+    },
+    {
+      "path": "RowmotionInteriorCollision/UpperWave.lean",
+      "sha256": "513475b396d44846194ae5340968fb4b144b89f27aa68e5388037d47d7bc1e3d"
+    },
+    {
+      "path": "RowmotionInvariantSupport/OrbitCount.lean",
+      "sha256": "eba3f06418b29142abd0b8848547174538e2d03d21b98b69d8d8d6acd26d90f7"
+    },
+    {
+      "path": "RowmotionModelDisjointness/CommonClearCut.lean",
+      "sha256": "68cf7ec14bf0618768d87a77b564e66c776f3ba70432381deeb9f866e5635cb5"
+    },
+    {
+      "path": "RowmotionOneOverlap/ActualEmbedding.lean",
+      "sha256": "094b3a49e9a508714e8e2851d96172866d04a07575504334fd4266d58ae56b25"
+    },
+    {
+      "path": "RowmotionOneOverlap/DirectBridge.lean",
+      "sha256": "18235f39f30092151cae8bdec2949ed6cb754abc3174496c35412876314b75d5"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeActual.lean",
+      "sha256": "d01579ef6f2be33275f6ad1b59c93b6738c23426216aabf07db58ad4fd98d692"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeArrays.lean",
+      "sha256": "65e7400d876812d1f4dab0d8b4820261315f5da488f6c5dc04b5089ff2f38dca"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeBounds.lean",
+      "sha256": "5c1319cab5f870b24e4906baf41dbac1dc3b78956593e324512090c67249b3da"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeCutoffs.lean",
+      "sha256": "9976a40f61a4d5909ed7ea2e0a143df252e3e076852d77f29b6c5e791f9accb5"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeDataFromMatching.lean",
+      "sha256": "0489e358d0249a230031b6623b414214814137fb7eac160dd72a60afde46276d"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeInput.lean",
+      "sha256": "dc16263e32d28be8e9fd787ef50b121572f07d37b19c6696d991d07de291cc94"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeLower.lean",
+      "sha256": "aab7b1faaf03c12018456b2de9a89069007e5a19ab0e2279b69f544a3f4187b4"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeLowerTransition.lean",
+      "sha256": "e53641ddb4463415f1889b1a2fe9e7ce33efcf8af1c9ba410d412c2ef4fd75f8"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeMiddleBridge.lean",
+      "sha256": "7013959ad7da5ff2ce9efd73818a55cebb2145e566b95b7cfff02861eb245fca"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeQualification.lean",
+      "sha256": "0979efba796b285ab2f8469cd2ed50199190bf7063a48cc71dda9ac1b07429c1"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeRecurrence.lean",
+      "sha256": "12126531fbbd9f1f15bdbf9547a0639580dfd5ced1971f5065c4e93833e29d95"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeShape.lean",
+      "sha256": "c6299784f8b5cdb42b308450e5e85159ebf833fa0c536cb327abccda1736d40d"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeTerminal.lean",
+      "sha256": "1618b68e7a112bc4511ab89f0c096b312fe278aa0f284b43bd0a9187ff3c1cb0"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeUpper.lean",
+      "sha256": "a5b508a558540c77d10a826e24a6ac1d3b928c64814039aabdbc19c42c2a86bd"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeUpperRecurrence.lean",
+      "sha256": "40f5529bc949ee9c00d72c7a5c27093176343f595ea9fa6fd1af2554599aa762"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeUpperShape.lean",
+      "sha256": "945a8e69ef22f137d62ec819e5703a9aec0948c916d7ed64ef9f7c1bd2f20137"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeUpperTransition.lean",
+      "sha256": "365cee82d3177918fe64f3139ff8137bb29e30a75c305bd88f54149428cd2625"
+    },
+    {
+      "path": "RowmotionOneOverlap/DistinctEdgeValidity.lean",
+      "sha256": "3d09530e17cc55e04675fc05eb2a1811b3c01ffba370b5521d5f2b91c04251fb"
+    },
+    {
+      "path": "RowmotionOneOverlap/DoubleRerootArrays.lean",
+      "sha256": "5da0add1d0b9491b86b03e0e34966d7ec817745ba15563d726c8dcbb2766cbe2"
+    },
+    {
+      "path": "RowmotionOneOverlap/DoubleRerootBridge.lean",
+      "sha256": "0059520fa83e3411c949b32f8eb4cb7949240a3ac7bfebc7e63d6623a5cfd7ec"
+    },
+    {
+      "path": "RowmotionOneOverlap/ExceptionalInput.lean",
+      "sha256": "b4a616b5c7464609c9704bf66ea36c3a9da3264cda4a373b3b5cc8c527b1b09a"
+    },
+    {
+      "path": "RowmotionOneOverlap/ExceptionalTransport.lean",
+      "sha256": "18910c8bd50e6b4b72c7db007656d01ef0814201482e3d25572daf24afed4b52"
+    },
+    {
+      "path": "RowmotionOneOverlap/HoleCutoffs.lean",
+      "sha256": "c5d6912bccb2e4bd4eb3500e07e637bb27e3c76d461683924283447b6a46e414"
+    },
+    {
+      "path": "RowmotionOneOverlap/MatchingCircumference.lean",
+      "sha256": "6f4bd1ae254f633b12c4ad804dbb7a5840b8aad1b8626534af3e235057af8ead"
+    },
+    {
+      "path": "RowmotionOneOverlap/MatchingClass.lean",
+      "sha256": "99787a2c5eaaf8c639f09283525d5113e76edb323974ffe487162cc520de7fa8"
+    },
+    {
+      "path": "RowmotionOneOverlap/MatchingClearCuts.lean",
+      "sha256": "4de53d9bb0e105b355d011a8e27c26bf3feaf7ed4022b113c17bf0bc2fceb931"
+    },
+    {
+      "path": "RowmotionOneOverlap/MatchingCorridor.lean",
+      "sha256": "2c37d7f23a77e919fdfa2a4884b29652381f5c4daeff5d9469f7111b1efa83ec"
+    },
+    {
+      "path": "RowmotionOneOverlap/MatchingEmbedding.lean",
+      "sha256": "d506ce66236a15bb135c29610ca61bb86bdf6c0f1ccd12824ad13b24f98b03e1"
+    },
+    {
+      "path": "RowmotionOneOverlap/MatchingEventCuts.lean",
+      "sha256": "b5ad4142476cd500d702541b7b87ae46018ed7ae4a24e3baf447f79a4d2d644e"
+    },
+    {
+      "path": "RowmotionOneOverlap/MatchingEvents.lean",
+      "sha256": "0aac0d4969bacd01abf662143854a40f4474bea21a1fd01227ccfe5f810a25b1"
+    },
+    {
+      "path": "RowmotionOneOverlap/PairHoleScan.lean",
+      "sha256": "7987df1ca4e5574f8ab77b004207c91d3683023b8ebc2407939cb322cabe0ef3"
+    },
+    {
+      "path": "RowmotionOneOverlap/PassiveActual.lean",
+      "sha256": "1deb6ac82d90c4d18fda7b74958b44526998b82fe4e7dc67038af8aed3a997bb"
+    },
+    {
+      "path": "RowmotionOneOverlap/PassiveBridge.lean",
+      "sha256": "5d71f69641936e794d22ba3bcd131f3d5b7f14e979341d8e47e3bc8c0c009def"
+    },
+    {
+      "path": "RowmotionOneOverlap/PassiveGeometry.lean",
+      "sha256": "fc4e4e3205261454bb972125440c012fa6ca982d2f77f7efa27a43fbfe48a7c4"
+    },
+    {
+      "path": "RowmotionOneOverlap/PassiveShape.lean",
+      "sha256": "2c9300fc6434bf724cf8c0efdee82fd9549cf4184e0b49ef0961e1e437ca410f"
+    },
+    {
+      "path": "RowmotionOneOverlap/PlateauMasks.lean",
+      "sha256": "afcb7eecbd88b17ac24bf8d0b9a2c421c976268acf5a3ea24e78af5741ede105"
+    },
+    {
+      "path": "RowmotionOneOverlap/RerootAtTime.lean",
+      "sha256": "fd6338550a8278a9b698a78d3a2e2e7bc50e3859d51b9c942c328730095d57af"
+    },
+    {
+      "path": "RowmotionOneOverlap/RerootCoordinates.lean",
+      "sha256": "2acf71d2b6845ce72c6ba8ffb0facd255a8d46c37654e2c243a444ac32c2ab0f"
+    },
+    {
+      "path": "RowmotionOneOverlap/ShortLeafActual.lean",
+      "sha256": "379be190f24af7972b45cb8db50185f301efad4f838b8ca20a1b1ab00dac0384"
+    },
+    {
+      "path": "RowmotionOneOverlap/ShortLeafBridge.lean",
+      "sha256": "241741bfc16af697597c354a26da562da72dc1a40ed6b4231b0e1a7216e6be2c"
+    },
+    {
+      "path": "RowmotionOneOverlap/ShortLeafCutoffs.lean",
+      "sha256": "9d3f2e0917e0c5429a38dd07140303d2108bf0531e527e94e10a21b9c33d043e"
+    },
+    {
+      "path": "RowmotionOneOverlap/ShortLeafGeometry.lean",
+      "sha256": "7f4601ca2f45eaba989aa3275fb0a7d7e66b1dc37caaf91d5da5536284e58486"
+    },
+    {
+      "path": "RowmotionOneOverlap/ShortLeafRecurrence.lean",
+      "sha256": "8cdb74a942b8eeb24e4f61de84b52f1fb45100e3afad7e6e48e7e67442876816"
+    },
+    {
+      "path": "RowmotionOneOverlap/ShortLeafShape.lean",
+      "sha256": "84221635616a08adb211c7105d68bcf27d459f8292b7617268fce7ac85daa18a"
+    },
+    {
+      "path": "RowmotionOneOverlap/TwoHoleScan.lean",
+      "sha256": "ffe5600c8904d7fc860e90f15703c6d4c32014b37aa7709b018e8ccbae3e5525"
+    },
+    {
+      "path": "RowmotionOneOverlap/WeakDecoder.lean",
+      "sha256": "4854f3e6c63ffa80903239ea40b09a6db508d4ba29c79a490e0cc3de3e053a70"
+    },
+    {
+      "path": "RowmotionOptional/Ceilings.lean",
+      "sha256": "203b7b7ea166ef7d73b5a6807873e66f29f0e76d97974409c52023229791129f"
+    },
+    {
+      "path": "RowmotionOptional/ComputableCutoffs.lean",
+      "sha256": "c7ff83e1ef1ff81bdb00c713c0911cf22a14f74b7a06a26b0c97e232a91e9767"
+    },
+    {
+      "path": "RowmotionOptional/Cutoffs.lean",
+      "sha256": "41ccc2400d41ef128189f72469502194de39058dbea42cd70aeca6204754d347"
+    },
+    {
+      "path": "RowmotionOptional/Rows.lean",
+      "sha256": "ec2cacde244e391c05daed90798fbbc161e09c576ba9b6e9300dee9e42cfb020"
+    },
+    {
+      "path": "RowmotionOptional/Step.lean",
+      "sha256": "b30c8ca48f7145e9ea7f6e8e1637c5e94709c8dd940840e6b0cf875fedf4edb7"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/ActualAssembly.lean",
+      "sha256": "ab433520c220caba92b7b0db99131bb3801691a541ebadc127c8f30f84ff61a7"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/ActualCounts.lean",
+      "sha256": "ebb4bfc46424672a3603a03d55881fcb694031ca3d9b791d4902a1cd4c56c6c2"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/ActualDenominatorCount.lean",
+      "sha256": "7f0c269291360f223aab48ed4665972f76c0e839b173c7161709fbda7186076d"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/ActualMatchingPeriodLoss.lean",
+      "sha256": "65614972dc766b956180130d0fecb7e4058681df0edfb8a5a1d3463a33281ccf"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/ActualPartitionPeriodLoss.lean",
+      "sha256": "f009908c065a5dcae4be8c3ff8cc8ea0c524ac24d6bae5d8612204c5a1f1bc13"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/AdjacentDeletion.lean",
+      "sha256": "1d28ea619144ed72977a6d1958a704e41c05c2318fa54bb5f35877025aa872f0"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/AdjacentEnumeration.lean",
+      "sha256": "1f22e094f49aaf6a3323e1479d9ad05359b60b1db2633bb946851e150d2b5200"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/AdjacentInsertion.lean",
+      "sha256": "d96bdec695c4189c1d1ca1de7553537613888fc1fcbce37564f0e4d594c38802"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/ChamberAsymptotic.lean",
+      "sha256": "dfaa65b9a55f58f061b5a7e2cbbce798c1ac18be62d748863ecd3494323f8c9d"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/ClearCut.lean",
+      "sha256": "9f0628d5c019f7a1cf682c113dc2a5ac1585a38f63cde1e0f179b0937584341d"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/CountAssembly.lean",
+      "sha256": "a85b8b9e72fade8d4df709b68286b1cca730deeacb4f32dce2cad5c22722eb09"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/CountEstimates.lean",
+      "sha256": "159b9593255a5ea460d70f71bc3598b1e8735f59757f3eb3d1ee906b7a038586"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/DenominatorCount.lean",
+      "sha256": "d91af091d73913f79434e7773bfc0c4cb1009c34e8a553c21d0769abef05e9be"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/DenominatorPolynomial.lean",
+      "sha256": "5a38c040b5a88dd43f06a3a5b1e006a03092075aedf2c1cb1be3a4c8220169da"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/DisjointModelCount.lean",
+      "sha256": "84d8a840e121d41c5c94fa7a2b437400cd987077308e3390d872c56a1a8fa82c"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/GlobalDisjointness.lean",
+      "sha256": "d219d2662e7397ebf216bd5a8f9c4b9813906816246a8332e853fd4e8ffa27ef"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/MarkedRoleReadback.lean",
+      "sha256": "9f30f3632c6e242a769ae8234ab127d573e44ee0257ba9fe79834e1fab8eb242"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/MatchingCountReduction.lean",
+      "sha256": "c512b9284c07c24fe055ccc38875403206ecdb3f0376a5b0880c3c1a003ece8e"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/MatchingDyck.lean",
+      "sha256": "63518ce6d7759b0360d6f44ff16c6c37fd21b8dac77e96845b2c4f65adbe09f0"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/MatchingEdgeCount.lean",
+      "sha256": "ed45e1f7472d6c453aea0aeb6dd01fc67a40cb2a3072e4ebede17bd80cd15b38"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/MatchingPolynomial.lean",
+      "sha256": "284f9e523ddd67e8e653add2fb028fe13f07ddc9997e0c2dc602dc17c1b6fdb6"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/MatchingShortLeaf.lean",
+      "sha256": "6d876cd72ae01b368d87fca0df85323c511407b8cc2a2bc66575fafa22c6ecfb"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/MatchingTypes.lean",
+      "sha256": "0672a7746e63534dba1405b2f498699c5f7f04cc26a269fb100752311256a020"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/ParameterPeriodLoss.lean",
+      "sha256": "1747e6b2bade9e6130e37296e8a0fb53c053319fa4d73f3fcaf4129f203228b5"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/PartitionParameters.lean",
+      "sha256": "470b58c5c9a21379797c13222676a1141928d60a59975a5452a22a5bd2c666a0"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/PolynomialExpansion.lean",
+      "sha256": "4b78d6566df75da645fb11bff50dd804a5eb08a80a7a15050d1b97584bc10700"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/RatioTransfer.lean",
+      "sha256": "06e7f2f79db1624b7866a776f812757822ac9eaed6f32ca657294544099638ab"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/RemainingInterfaces.lean",
+      "sha256": "d808748c6f1981fcadb97993f658077b69e6603115ff566d9daa400090db941a"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/SharpTheorem.lean",
+      "sha256": "3ccbd2a8fa215ded5156e582c60b9a4c46ee16b4c7b1ec3eb25eaa5b0975aaa5"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/ShiftPeriodLoss.lean",
+      "sha256": "dbd1c8b87b7c9ed36d60cb11901ccbcc6a7476c5ffad805f424707e5d71b3d1c"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/SparseSupportCount.lean",
+      "sha256": "6b034c4de98d8454bac0b47cd4969099e0a5838a909c13b914cd3556a1e251c8"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/SupportGeometry.lean",
+      "sha256": "db003fa6f7ea8c0e1529954d157fdd7539022d4d5dcb06d19c88b16469310467"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/SupportPeriodLoss.lean",
+      "sha256": "5b9b46d5818b0b3c91c6f42c5b5e2ec12d3fc1aee9974b26291d65a5f20c9a5b"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/SupportSmallGaps.lean",
+      "sha256": "fe1445b17f5b1d44271d6c11cb547162513b22968597f75e99b5d63fe2de1695"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/TripleDyckExtraction.lean",
+      "sha256": "471943024342eef88da195040e88d62451fa1e7f465a2c8bd4dc1ed2cabd6f61"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/XCount.lean",
+      "sha256": "6d00aa331f7df7c41a6f49188632ba4aece0a136bd729f46422870f36c4bda54"
+    },
+    {
+      "path": "RowmotionSharpAllWidth/XExact.lean",
+      "sha256": "97ef648358a5f415b4c6643f150d79e9d475bca82af1dd795f6bda41fd9d29dd"
+    },
+    {
+      "path": "RowmotionSharpAllWidth.lean",
+      "sha256": "d98fdf359f09bc9aec2b57bccb18b38bdf575e6db77e5ccb204ebffee6d8d59f"
+    },
+    {
+      "path": "RowmotionSharpCounting/FixedSumHyperplane.lean",
+      "sha256": "ac7312b6e058d9516cf2d798f7eb10b9ce3f519e94077d8834f1514be2a25614"
+    },
+    {
+      "path": "RowmotionTopCollision/Actual.lean",
+      "sha256": "f7a9e7be870dee26739ba69a31ac8d11d10e10e5736f8e1624236d3e062058f1"
+    },
+    {
+      "path": "RowmotionTopCollision/BottomGeometry.lean",
+      "sha256": "d14dc37048ab90ac854d443a570282e5fde20431198e7f40f3a886b10c0ea1cd"
+    },
+    {
+      "path": "RowmotionTopCollision/BottomStages.lean",
+      "sha256": "96c917b09ba15c4f2df170b2c45391eaa640a802f6d722393268af446f38616e"
+    },
+    {
+      "path": "RowmotionTopCollision/BoundaryHoles.lean",
+      "sha256": "4c89048f440658c4cb3714d73483493411119d22b216bfbd7095009ea052602b"
+    },
+    {
+      "path": "RowmotionTopCollision/CoupledLocal.lean",
+      "sha256": "bc55b1ea1b8716022a4323180bef01522586f9eb5b94587fc36a85114571a8bb"
+    },
+    {
+      "path": "RowmotionTopCollision/CoupledShape.lean",
+      "sha256": "2baf01c0783082e772facddc1e3748bb43c52b9bfe80acedf2eb6a0d3e9b1c12"
+    },
+    {
+      "path": "RowmotionTopCollision/CoupledWave.lean",
+      "sha256": "19566ee44875b0c360d3ed8bb865c3c9fb32289876d6390186d755d335ef58ad"
+    },
+    {
+      "path": "RowmotionTopCollision/Geometry.lean",
+      "sha256": "fdf8d843b25bb45a5ff104192099ed2c392df368e8cd6457f5d6a31e442f1dfb"
+    },
+    {
+      "path": "RowmotionTopCollision/TerminalGeometry.lean",
+      "sha256": "7c7fcf1762b54b07f75ed79fc155bf69901b53bcbcb0fd3b0acc592bc8f3a960"
+    },
+    {
+      "path": "RowmotionTripleRealization/BlockBuilder.lean",
+      "sha256": "6fba5ba32dcf9df937f048ac3afe4371ec57f6060b15a4effccaf75bfa348840"
+    },
+    {
+      "path": "RowmotionTripleRealization/NoncrossingPaths.lean",
+      "sha256": "4aaf4b3dc01f251ee6ba301a8d6e1b0f1c766473c73e25cae4ba541f7d71a689"
+    },
+    {
+      "path": "RowmotionTripleRealization/PartitionEquivalence.lean",
+      "sha256": "fa25537df70795d36f748040726376dd50f55f4df0543f8ecf0516694c9ee23a"
+    },
+    {
+      "path": "RowmotionTripleRealization/SpliceLabels.lean",
+      "sha256": "f2468039d5862d5da954d27ec3f97ae868a9619180c6f11b46442d9c95793597"
+    },
+    {
+      "path": "RowmotionTripleRealization/SpliceMatching.lean",
+      "sha256": "1e5c2ca2b918db0fd872105a60cdb2c72c08e52b50e82efa6bb0c94b3f51e35f"
+    },
+    {
+      "path": "RowmotionTripleRealization/SpliceRoleReadback.lean",
+      "sha256": "4b934cb7b0ab9c843131a1c35d8c691350b84d4b328449d223956a16cf873fb8"
+    },
+    {
+      "path": "RowmotionTripleRealization/ValleyRealization.lean",
+      "sha256": "a5694c15fa705d39e3de9a5a0ad439d02c52dcf48550ee6a995bfa8f56818ba2"
+    }
+  ]
+}

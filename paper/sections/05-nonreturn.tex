@@ -1,0 +1,127 @@
+\section{A codimension-one family of nonreturning states}\label{sec:nonreturn}
+The upper bound needs many states returning at the baseline time; the lower bound needs states that definitely do not. Here a single physical unit gap at a valley supplies the obstruction.
+
+Let $d=2m-1$ and set
+\begin{equation}\label{eq:floor}
+ G=G(m)=m+6+(m+2)d(d+1).
+\end{equation}
+In a strict endpoint word mark one valley $BA$ and give its two coordinates distance one. Require every other consecutive endpoint gap, the one-based left margin, and the right margin to be at least $G$. The Dyck condition produces an actual row-nonempty state. The word, mark, and gaps are uniquely recovered from the state, since there is exactly one unit gap.
+
+\subsection{Exact strict-boundary events}
+A \emph{strict boundary state} has strict endpoint lists and $b_1=n$. For the unit-gap events considered here, assume also that all $2m$ coordinates are distinct. List them as $z_1<\cdots<z_{2m}=n$, and mark the valley pair $z_{j_*}=b_q$, $z_{j_*+1}=a_p=b_q+1$. Define its separation parameter by
+\[
+ \eta(I)=\min\Bigl(\{z_1\}\cup
+ \{z_{j+1}-z_j:1\le j<2m,\ j\ne j_*\}\Bigr).
+\]
+Thus the left margin is the one-based coordinate $z_1=a_m$, and the zero right margin is omitted. The condition $\eta(I)\ge H$ says precisely that every unmarked consecutive gap and this left margin are at least $H$; it does not require a gap between the marked pair. Suppose $H\ge m+6$ and $\eta(I)\ge H$, and put
+\[
+ k=\min\{i:i=m\text{ or }a_i>b_{i+1}\}.
+\]
+There are three cases:
+\begin{itemize}
+\item $\OO$ (passive): $(p,q)\ne(k,k+1)$;
+\item $\II$ (interior): $(p,q)=(k,k+1)$ and $k\ge2$;
+\item $\TT$ (top): $(p,q)=(k,k+1)=(1,2)$.
+\end{itemize}
+In case $\OO$, $k\ne p$: if $q=p+1$, first crossing gives $k\le p$ and passivity excludes equality; if $q>p+1$, the separated endpoint $b_{p+1}$ is larger than $a_p$. Thus the short pair is not removed by the ordinary wave.
+
+\begin{lemma}[Unit-gap boundary events]\label[lemma]{lem:events}
+Under the preceding hypotheses, the local durations are $\ell=m,m+1,m+3$ in cases $\OO,\II,\TT$, respectively. Their terminal strict endpoint lists are:
+\begin{align*}
+\OO:\quad A'&=(a_1+m,\ldots,a_{k-1}+m,a_{k+1}+m,\ldots,a_m+m,1),\\
+B'&=(b_2+m,\ldots,b_k+m,a_k+m-2,b_{k+1}+m,\ldots,b_m+m);\\[2pt]
+\II:\quad A'&=(a_1+m+1,\ldots,a_{k-1}+m+1,a_{k+1}+m+1,\ldots,a_m+m+1,1),\\
+B'&=(b_2+m+1,\ldots,b_k+m+1,a_{k-1}+m,b_{k+1}+m+1,\ldots,b_m+m+1);\\[2pt]
+\TT:\quad A'&=(a_2+m+3,\ldots,a_m+m+3,1),\\
+B'&=(b_2+m+3,\ldots,b_m+m+3,a_m+m+2).
+\end{align*}
+Their top upper endpoints are below $n$. Translation to the next strict boundary gives total elapsed time
+\begin{equation}\label{eq:event-time}
+ \tau=\begin{cases}n-a_1+2&\OO\text{ with }k=1,\\n-b_2&\text{otherwise}.
+ \end{cases}
+\end{equation}
+There is no intervening strict boundary state. At the next strict boundary state $I^+$, with the transported marked pair described below, $\eta(I^+)\ge H-(m+2)$.
+\end{lemma}
+\begin{proof}
+The passive case is the ordinary wave in \cref{app:ordinary}, because the only small gap is passive and $k\ne p$. The other two cases, including their empty-row phases, are proved directly in \cref{app:unit}. These formulas give \eqref{eq:event-time} on adding $n-B'_1$ translation steps. During each local passage there is a repeated endpoint or an empty row. The top passage revisits $b_1=n$ only with a repeated lower endpoint. Thus no earlier strict boundary state occurs.
+
+All nonmarked endpoint differences at the terminal phase are at least $H-2$ (and at least $H-1$ in the collision cases). The inserted $1$ becomes $1+n-B'_1$ at the next boundary. The displayed upper sources give this new left margin at least $H-\ell+1\ge H-m-2$. This proves the conservative common loss bound.
+\end{proof}
+
+Write the marked Dyck word uniquely as $UAVB$, with $AVB$ its last primitive component. The last-component opening is the first crossing $a_k$. Reading the endpoint formulas gives the following marked-word update:
+\begin{align*}
+\OO:&\quad UAVB\longmapsto AUBV,\quad\text{carry the old marked letters};\\
+\II:&\quad UAVB\longmapsto AUBV,\quad\text{mark }B\mid\text{the first }A\text{ of }V;\\
+\TT:&\quad UAB\longmapsto ABU,\quad\text{mark the displayed }B\mid\text{the first }A\text{ of }U.
+\end{align*}
+In the latter two cases the old mark is at $U|A$, so $U$ is nonempty, and in the interior case $V$ is nonempty. These descriptions follow from which opening is deleted or flipped; they do not assume a return time. The zero-based position of the marked $B$ changes by $1,2,-(d-3)$ in the three cases.
+
+\subsection{Gap transport and a closed-return identity}
+At a strict boundary state list the $2m$ endpoint coordinates increasingly. Delete the marked unit gap from the list of gaps, keep the one-based left gap, and omit the zero right margin. This gives $h=(h_0,\ldots,h_{d-1})$ with
+\[
+ S=\sum_i h_i=n-1.
+\]
+Let $\sigma(h)=(h_{d-1},h_0,\ldots,h_{d-2})$, and let $e_i$ denote coordinate unit vectors.
+
+\begin{lemma}\label[lemma]{lem:gap-transport}
+At successive strict boundary states, the gaps obey
+\begin{align}
+\OO:\quad h'&=\sigma(h-2e_s+2e_{s+1})-(m-1)e_0+(m-1)e_1,\label{eq:O-gap}\\
+\II:\quad h'&=\sigma h-me_0+me_1,\label{eq:I-gap}\\
+\TT:\quad h'&=\sigma h-(m+1)e_0+(m+1)e_1.\label{eq:T-gap}
+\end{align}
+Here $s\in\{0,\ldots,d-2\}$ in case $\OO$ is the large gap immediately preceding the flipped opening. The elapsed time is $\tau=h_{d-1}+\epsilon$, where $\epsilon=2$ for $\OO$ with $s=d-2$, $\epsilon=1$ for $\TT$, and $\epsilon=0$ otherwise.
+\end{lemma}
+\begin{proof}
+In the passive case, first move the flipped opening left by two: its two neighboring large gaps change by $-2,+2$. Neither is the marked gap because the mark is passive. Removing the final endpoint, inserting the new first endpoint $1$, and translating to the next boundary rotates these gaps, with an extra transfer of $m-1$ from the new first gap to the next. This is \eqref{eq:O-gap}. Only when the flipped opening is the penultimate endpoint, equivalently $s=d-2$ or $k=1$, does moving it change the last surviving endpoint; the event time gains two.
+
+In case $\II$, the marked opening is deleted and a new closing is inserted one unit before the next opening. Removing the old unit gap and inserting the new one cancel on the intervening large gap. The other large internal gaps retain their order. Since $\ell=m+1$, the new first and second gaps are $h_{d-1}-m$ and $h_0+m$, giving \eqref{eq:I-gap}. In case $\TT$, the final opening and closing are deleted and a closing is inserted one unit before the smallest surviving opening. The same difference computation, with $\ell=m+3$ and time $n-b_2=h_{d-1}+1$, gives \eqref{eq:T-gap}. All endpoint orders used in these computations are guaranteed by \cref{lem:events}.
+\end{proof}
+
+Put $Q(h)=\sum_{i=0}^{d-1}ih_i$. Since
+\[
+ Q(\sigma h)-Q(h)=S-dh_{d-1},
+\]
+\cref{lem:gap-transport} gives the identity
+\begin{equation}\label{eq:cocycle}
+ d\tau=S+\kappa-\bigl(Q(h')-Q(h)\bigr),\qquad
+ \kappa_{\OO}=m+1,\quad\kappa_{\II}=m,\quad\kappa_{\TT}=3m.
+\end{equation}
+For $\OO$, the two-unit transfer contributes $2$ to $Q$ after the cyclic shift, except at $s=d-2$, where it contributes $-2(d-1)$; the additional $d\epsilon=2d$ cancels that discrepancy. The other two values follow directly.
+
+Suppose a closed segment has $K>0$ events, including $O$ passive, $I$ interior, and $T$ top events. Equality of the initial and final marked positions yields
+\[
+ O+2I=(d-3)T,\qquad K+I=(d-2)T.
+\]
+In particular $T>0$, since $T=0$ forces $O=I=0$. Summing \eqref{eq:cocycle}, with $N=S+m+2$, gives the key identity for the actual elapsed time $t$:
+\begin{equation}\label{eq:closed-return}
+ dt=KN+2T.
+\end{equation}
+No coprimality of a marked-word cycle is needed.
+
+\begin{proposition}\label[proposition]{prop:nonreturn}
+Every separated marked unit-gap chamber with free gaps at least $G(m)$ consists of states $I$ satisfying $R^N(I)\ne I$.
+\end{proposition}
+\begin{proof}
+First suppose the initial state is strict boundary and all its $d$ large gaps are at least $G$. \Cref{lem:events} applies to the first $d+1$ events, because after $j\le d$ events the separation is at least $G-j(m+2)\ge m+6$.
+
+The affine gap formulas have the form $h^{j+1}=\sigma h^j+v_j$, every coordinate of $v_j$ being at least $-(m+2)$. Hence
+\[
+ h_i^j\ge h^0_{i-j\bmod d}-j(m+2).
+\]
+As each event time is at least the current last gap, the first $d+1$ event times sum to at least
+\[
+ S+h^0_{d-1}-\frac{(m+2)d(d+1)}2
+ \ \ge\ S+G-\frac{(m+2)d(d+1)}2\ >\ S+m+2=N.
+\]
+Here the last-gap coordinate has consumed one full cycle of initial gaps and one repeated gap. Thus, if the initial state returned at time $N$, it would do so at one of the first $K\le d$ strict-boundary events. Equation \eqref{eq:closed-return} would imply
+\[
+ (d-K)N=2T.
+\]
+For $K=d$ this contradicts $T>0$. For $K<d$ it implies $N\le2T\le2K\le2(d-1)$, while $N\ge dG+m+2$, again impossible.
+
+For an interior chamber, translate until $b_1=n$. Its two outer margins merge into the boundary left gap; every other large gap is unchanged. The boundary floor still holds. Since $R$ is a permutation and its iterates commute, a baseline return of the original state would imply a baseline return of this boundary state. The latter has just been excluded.
+\end{proof}
+
+\paragraph{The role of the floor.}
+The value $G(m)$ is a conservative proof convenience. It keeps the local event hypotheses valid through the bounded sequence used above and makes the elapsed-time estimate exceed $N$. No optimal separation threshold is claimed. The proof does not extend the nonreturn assertion to zero or arbitrarily small unmarked gaps; finite tests in such regimes would not establish that extension.

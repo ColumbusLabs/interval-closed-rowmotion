@@ -1,0 +1,52 @@
+\section{A disjoint model with one three-element block}\label{sec:partitions}
+Let $Y=Y_{m,N,D}$ be the noncrossing partitions of an occupied subset of the circle with one block of size three, $m-2$ blocks of size two, and all $2m-1$ occupied-support gaps at least $D=3m+8$. Draw an arc between consecutive elements of each block in linear order. A triple $u<v<w$ contributes arcs $(u,v),(v,w)$. Read the shared vertex $v$ as $B$ before $A$. The $m$ arcs give a Dyck word with a marked valley whose two endpoint coordinates coincide. Conversely, merge the incident edges at a marked valley of a stack matching. This recovers exactly one triple and the remaining pairs; no crossing is introduced because the identified endpoints were consecutive. Thus this encoding is bijective.
+
+At a clear cut, use the same direct formula \eqref{eq:decoder}. Each endpoint list is strict, and there is exactly one cross-list equality among the support coordinates. In physical endpoints it becomes a gap $a_p=b_q+2$, with $p<q$. Every other difference is at least $D-2$. Rank-paired support coordinates are distinct and separated, so all rows are nonempty and lie in the grid. The shared-coordinate reconstruction proves direct injectivity.
+
+\begin{lemma}[The gap-two passage]\label[lemma]{lem:gap-two}
+Suppose strict physical endpoint lists have $b_1=n$, exactly one small pair $a_k=b_{k+1}+2$, and all other endpoint differences and the left margin at least $H=m+6$. Assume $k$ is the first crossing, so $a_i<b_{i+1}$ for $i<k$. Set
+\[
+ r=\min\{i:k<i\le m,\quad i=m\text{ or }a_i>b_{i+1}\}.
+\]
+After $m$ rowmotion steps the endpoints are
+\begin{align}
+ A'_i&=\begin{cases}a_i+m&i<k,\\a_{i+1}+m&k\le i<m,\\1&i=m,\end{cases}\label{eq:gap2A}\\
+ B'_i&=\begin{cases}b_{i+1}+m&i<r,\\a_r+m-2&i=r,\\b_i+m&i>r.\end{cases}\label{eq:gap2B}
+\end{align}
+At every interior time $j$, the only repeated-endpoint position is between rows $j,j+1$; the upper list, both lists, or the lower list repeats there, in that order.
+\end{lemma}
+\begin{proof}
+For $0\le j<k$ use the ordinary upper wave: $A_i=a_i+j$ and $B_i=b_{i+1}+j$ for $i\le j$, otherwise $b_i+j$. At $j=k-1$ the missing ceiling row is $k$. Its cutoffs are
+\[
+ D_k=b_{k+1}+j+1=a_k+j-1,\qquad E_k=a_{k+1}+j.
+\]
+The incomparable contribution is removed by the old interval, leaving the shifted next row. For $k\le j<r$, the resulting arrays are
+\[
+ A_i=\begin{cases}a_{i+1}+j&k\le i\le j,\\a_i+j&\text{otherwise},\end{cases}
+ \quad
+ B_i=\begin{cases}b_{i+1}+j&i\le j,\\b_i+j&i>j.\end{cases}
+\]
+Both lists repeat at $j,j+1$. In row $h=j+1$ the cutoffs are $D_h=b_{h+1}+j+1$ and $E_h=a_{h+1}+j$. Until $h=r$, the overlap $a_h<b_{h+1}$ makes the incomparable term empty, so the equal-row pair propagates. At $h=r<m$, its large crossing instead gives the interval $[a_{r+1}+j+1,a_r+j-1]$. The upper list then has the final sources in \eqref{eq:gap2B}; the lower repeated endpoint propagates to the bottom, which inserts $1$. If $r=m$, the zero cutoffs give $[1,a_m+m-2]$ directly.
+
+All changed row sources are original valid rows or the displayed crossing interval. Separation makes the crossing interval nonempty, prevents unintended equalities, and keeps all retained upper endpoints below $n$. The exceptional $a_k$ is deleted before it can create an additional comparison. This proves the arrays, their validity, and the terminal formulas by \eqref{eq:row-rule}.
+\end{proof}
+
+\begin{proposition}\label[proposition]{prop:partition-embedding}
+There is an injective equivariant map $F_Y:Y\longrightarrow\IC([m]\times[n])$, agreeing with its direct decoder at every clear cut and preserving least periods.
+\end{proposition}
+\begin{proof}
+At a start with an occupied vertex at $N$, only that vertex crosses the cut within $m$ steps. If its block is a pair, the ordinary wave of \cref{app:ordinary} applies with the shared vertex passive: the flipped opening is not the marked opening, so the small gap is not at its switch. If its block is a triple, write the expanded word as
+\[
+ U_0 A W\,B A\,V B,
+\]
+where the displayed $BA$ is shared and $U_0,W,V$ are Dyck words. Its last primitive opening gives the first crossing $k$; the mate of the preceding marked $B$ gives the next crossing $r$. Under rerooting the triple, the shared coordinate moves from its middle vertex to its first vertex. The new word is $A U_0 B A W B V$, with the displayed $B|A$ marked. The coordinate changes are exactly \eqref{eq:gap2A}--\eqref{eq:gap2B}. Thus $R^mF_0(P)=F_0(\rho^mP)$ in both cases.
+
+At most one occupied point lies in the corridor, since $D>m$. If it is $j\in C_0$, define $F_Y(P)=R^jF_0(\rho^{-j}P)$; otherwise use $F_0(P)$. The terminal identity and translation prove equivariance. The common-clear-cut proof used for $X$ also gives injectivity: two supports forbid at most $2(2m-1)(m-1)$ shifts, whereas nonemptiness of $Y$ implies $N\ge(2m-1)D$ and hence leaves a clear shift. At that shift the direct decoder is injective. Least periods are preserved as before.
+\end{proof}
+
+\begin{lemma}\label[lemma]{lem:disjoint}
+If $N>(4m-1)(m-1)$, the images of $F_X$ and $F_Y$ are disjoint.
+\end{lemma}
+\begin{proof}
+If two images coincide, equivariance preserves their equality after any common rotation. Their support union has at most $4m-1$ points, so some rotation makes both cuts clear. Recovering $p_i=a_i+m-1$, $q_i=b_i+m+1$ from the common state would then give both no cross-list equality (a matching) and exactly one cross-list equality (a triple partition), a contradiction.
+\end{proof}

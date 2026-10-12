@@ -1,0 +1,27 @@
+\section{Formal certificate, reproducibility, and limits}\label{sec:certificate}
+The main result is accompanied by the Lean declaration
+\begin{center}
+\src{RowmotionSharpAllWidth.actualRowmotion_sharp_all_width}.
+\end{center}
+Its only public hypotheses are a natural number $m$ and $2\le m$. The definitions count literal order-convex predicate subsets of $\mathrm{Fin}\,m\times\mathrm{Fin}\,n$, and states lacking least period $n+m+1$ under reverse row-major toggles. The row-major list is proved to be a duplicate-free complete linear extension. There is no remaining count, injectivity, equivariance, disjointness, or nonreturn assumption in the final theorem.
+
+The \href{https://github.com/ColumbusLabs/interval-closed-rowmotion}{companion repository} supplies sources in \src{formal/sharp-allwidth}. Two inventories bind their contents:
+\begin{itemize}
+\item \src{SOURCE_MANIFEST.json} lists the SHA-256 hashes of all 225 mathematical source modules.
+\item \src{PACKET_MANIFEST.json} additionally binds the verification drivers, build configuration, and source-checking scripts.
+\end{itemize}
+The declaration above is the final unconditional theorem. The repository's theorem-to-source map aligns the written proof with the corresponding Lean declarations.
+
+The recorded verification rebuilt all 225 local mathematical modules, audited all 9,278 project declarations (including generated declarations), and replayed the complete imported environment into a fresh pinned Lean kernel. Its permitted axiom dependencies are the standard \src{propext}, \src{Classical.choice}, and \src{Quot.sound}; no project axiom or admitted proof was accepted. It used Lean 4.34.1, commit \src{5045d0056413266e57c625dcd7c365b10e377c52}, and mathlib revision \src{d13f23b723b8a846827a245b89c10fc7d3f11612}. The replay is a fresh run of the pinned kernel, not an independently implemented proof checker. The replay and audit drivers are separate from the mathematical proof imports.
+
+The formal denominator proof uses an explicit endpoint/Dyck equivalence rather than assuming \eqref{eq:narayana}: weak coordinates with a stable tie convention give the exact sum
+\[
+ \sum_{w\text{ Dyck of semilength }m}
+ \binom{n+2m-1-\operatorname{val}(w)}{2m}.
+\]
+It then derives the same two leading terms and handles empty rows separately. This alternative formal route does not turn the previously known enumeration into a novelty claim. Likewise the formal proper-period argument uses a finite support-permutation encoding, while \cref{lem:proper} uses the elementary cyclic-subgroup count; both bound actual source states to the required order.
+
+The accompanying theorem-to-source map records these alignments and the precise local modules for the appendices. Build instructions, source hashes, toolchain pins, and a verification summary accompany the manuscript. Recompiling this PDF does not rerun the Lean certificate; those are distinct reproducibility tasks.
+
+\paragraph{Scope left open.}
+The proof establishes a sharp state-density asymptotic at each fixed width. It does not give a uniform growing-width error bound, a complete orbit classification, or general least periods for noncoprime boundary-phase cycles. The separately certified width-three period-distribution refinement is outside this manuscript's proof scope. Questions about lower-order coefficients and growing-width sharpness require additional analysis.

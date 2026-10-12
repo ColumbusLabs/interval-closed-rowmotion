@@ -1,0 +1,43 @@
+{
+  "scope": "Recorded verification of the exact 225 mathematical module bytes in SOURCE_MANIFEST.json; release packaging did not rerun the full Lean build or replay.",
+  "mathematical_module_count": 225,
+  "project_declaration_count": 9278,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "lean_version": "4.34.1",
+  "lean_commit": "5045d0056413266e57c625dcd7c365b10e377c52",
+  "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "fresh_replay_scope": "Complete imported environment replayed using a fresh instance of the same pinned Lean kernel, not an independently implemented checker.",
+  "gate_exit_codes": {
+    "clean-build": 0,
+    "full-declaration-audit": 0,
+    "symbolic-checks": 0,
+    "fresh-full-kernel-replay": 0
+  },
+  "declaration_counts_by_module_family": {
+    "Rowmotion": 1629,
+    "RowmotionBANonreturn": 178,
+    "RowmotionBoundaryEvents": 614,
+    "RowmotionBoundaryGap": 255,
+    "RowmotionBoundaryMechanism": 273,
+    "RowmotionChamberNonreturn": 81,
+    "RowmotionCounting": 28,
+    "RowmotionDyckValleys": 112,
+    "RowmotionGapTwo": 1189,
+    "RowmotionGeneralChambers": 137,
+    "RowmotionGeneralDiscard": 49,
+    "RowmotionGeneralSimplex": 53,
+    "RowmotionInteriorCollision": 451,
+    "RowmotionInvariantSupport": 13,
+    "RowmotionModelDisjointness": 5,
+    "RowmotionOneOverlap": 2257,
+    "RowmotionOptional": 147,
+    "RowmotionSharpAllWidth": 1017,
+    "RowmotionSharpCounting": 17,
+    "RowmotionTopCollision": 605,
+    "RowmotionTripleRealization": 168
+  }
+}

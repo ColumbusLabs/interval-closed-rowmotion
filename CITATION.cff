@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the paper when using this work."
+type: article
+title: "Sharp exceptional density for rowmotion on interval-closed sets of a rectangle"
+authors:
+  - name: "Columbus Labs"
+    email: "info@columbus-labs.com"
+year: 2026
+url: "https://github.com/ColumbusLabs/interval-closed-rowmotion"
+repository-code: "https://github.com/ColumbusLabs/interval-closed-rowmotion"
+license: CC-BY-4.0
+keywords:
+  - rowmotion
+  - interval-closed sets
+  - asymptotic enumeration
+  - formal verification

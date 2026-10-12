@@ -1,0 +1,48 @@
+\section{Introduction and statement}
+An interval-closed subset of a finite poset is an order-convex subset: if it contains $x$ and $y$, it contains every $z$ with $x\le z\le y$. A toggle changes membership at one element when the resulting set is still interval-closed, and otherwise fixes the set. To fix the composition convention, let $(x_1,\ldots,x_{mn})$ be a linear extension from minimal to maximal elements and let $t_x$ be the toggle at $x$. We apply $t_{x_{mn}}$ first and $t_{x_1}$ last. Thus, with function composition evaluated right to left,
+\[
+ R=t_{x_1}\circ t_{x_2}\circ\cdots\circ t_{x_{mn}}.
+\] We use the coordinatewise order on $[m]\times[n]$ and write $R$ for this permutation of $\IC([m]\times[n])$.
+
+For a state $I$, let $\per(I)$ be its least positive return time. Set
+\[
+ A_m(n)=|\IC([m]\times[n])|,\qquad
+ E_m(n)=|\{I\in\IC([m]\times[n]):\per(I)\ne n+m+1\}|.
+\]
+These are numbers of states, not numbers of orbits. Put
+\[
+ c_m=\frac{\Cat_m}{(2m)!}=\frac1{m!(m+1)!},\qquad
+ \Cat_m=\frac1{m+1}\binom{2m}{m}.
+\]
+
+\begin{theorem}\label{thm:main}
+For every fixed integer $m\ge2$, as $n$ tends to infinity through all positive integers,
+\begin{align}
+ E_m(n)&=c_m m(m-1)n^{2m-1}+O_m(n^{2m-2}),\label{eq:main-count}\\
+ \frac{E_m(n)}{A_m(n)}&=\frac{m(m-1)}n+O_m(n^{-2}).\label{eq:main-ratio}
+\end{align}
+In particular, the fraction of states of least period $n+m+1$ tends to one.
+\end{theorem}
+
+The width is fixed throughout. Neither the implicit constants nor the onset of the asymptotic estimate is claimed uniform in a growing $m$. The theorem does not classify every exceptional orbit. It counts both states that fail to return after $n+m+1$ steps and states whose least period is a proper divisor of that number.
+
+\subsection{Relation to prior work}
+Elder, Lafreni\`ere, McNicholas, Striker, and Welch introduced the interval-closed toggle dynamics and established its global description \cite{ELMSW}. Their chain orbit classification, \cite[Theorem 3.2, arXiv v2]{ELMSW}, already implies the width-one density statement recalled in \cref{prop:width-one}. Lafreni\`ere, Lewis, McNicholas, Striker, and Welch simplified that description, classified width two, and proposed the fixed-width density-one statement in Conjecture 4.1 of \cite{LLMSW}. Their Section 4.1 already suggests a separated-endpoint family, Catalan endpoint orders, and comparison with all interval-closed sets. We retain this attribution: the density strategy and the width-two case are prior work.
+
+The row-nonempty enumeration used below is also prior work: \cite[Theorem 2.7, arXiv v1]{ELLMSW} restates the Narayana-number formula from \cite[Theorem 4.4, arXiv v2]{ELMSW}. Noncrossing rotation models belong to the classical rowmotion literature; see \cite{SW}. The contribution developed here is the explicit passage from rotation to interval-closed-set rowmotion when two boundary waves overlap, together with a matching sharp lower bound from actual nonreturn dynamics. The coefficient $2$ at $m=2$ is consistent with, and already recoverable from, the existing width-two classification. No absolute novelty or publication-priority claim follows from the bounded literature comparison accompanying this project.
+
+\subsection{Architecture of the proof}
+The proof separates dynamics from enumeration. Set $N=n+m+1$ and $D=3m+8$. We construct injective equivariant maps into the actual state set from:
+\begin{itemize}
+\item $X$: noncrossing $m$-edge matchings on the $N$-circle with at most one support gap below $D$, excluding edges between ambient-adjacent vertices;
+\item $Y$: noncrossing partitions on the $N$-circle with one triple and $m-2$ pairs, all occupied-support gaps at least $D$.
+\end{itemize}
+Their images are disjoint for all sufficiently large $n$. Almost every source state has least rotation period $N$, and the exceptions have order at most $n^{2m-2}$. Their combined cardinality is
+\[
+ |X|+|Y|=c_m\bigl(n^{2m}+mn^{2m-1}\bigr)+O_m(n^{2m-2}).
+\]
+The total state count has second coefficient $m^2$ instead of $m$. Thus these two models give the upper bound in \eqref{eq:main-count}.
+
+For the lower bound, mark a valley $BA$ in a Dyck endpoint word and require the corresponding physical gap to be one. Keep every other endpoint gap and both margins above a fixed width-dependent floor. The resulting states cannot return at time $N$. There are $\frac{m-1}{2}\Cat_m$ marked valleys, and stars and bars gives their total leading coefficient $c_m m(m-1)$. The proof of nonreturn uses a finite sequence of rigorously controlled boundary events; it requires no full classification of their least periods.
+
+The longer local calculations are in the appendices. Their complete candidate phase arrays and cutoff verifications make the dynamical argument independent of finite experiments or the formal certificate.

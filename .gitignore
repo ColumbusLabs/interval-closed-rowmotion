@@ -1,0 +1,9 @@
+**/.lake/
+**/__pycache__/
+*.pyc
+*.aux
+*.blg
+*.log
+*.out
+*.toc
+reproduction-evidence/
