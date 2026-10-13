@@ -167,3 +167,9 @@ Previously known consequence of Elder et al., arXiv:2307.08520v2, Theorem 3.2; t
 
 This attribution and the written rederivation are outside the sealed m >= 2 Lean theorem closure.
 
+
+## Additional companion results
+
+This map continues to describe the unchanged main paper. The separate
+[companion guide](COMPANION_RESULTS.md) and [companion source map](COMPANION_SOURCE_MAP.md)
+cover the additional results included in this release.

@@ -3,6 +3,7 @@
 from pathlib import Path
 import hashlib,json,subprocess,sys,zipfile
 root=Path(__file__).resolve().parents[1]
+if sys.flags.optimize:raise SystemExit('Run without Python optimization.')
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 manifest=root/'RELEASE_MANIFEST.json'
 expected=(root/'RELEASE_MANIFEST.sha256').read_text().split()[0]
@@ -25,5 +26,6 @@ assert sha(paper/'SOURCE_MANIFEST.json')==pdf['source_manifest_sha256']
 assert sha(paper/'rowmotion-source.zip')==pdf['source_archive_sha256']
 subprocess.run([sys.executable,str(root/'formal/sharp-allwidth/scripts/verify_packet.py')],check=True)
 subprocess.run([sys.executable,str(root/'formal/sharp-allwidth/scripts/source_checks.py')],check=True)
+subprocess.run([sys.executable,str(root/'reproduction/check_companions.py'),'--source-only'],check=True)
 print('PASS:',len(data['files']),'release files; paper archive, PDF and formal-source bindings match.')
 print('Inventory verification does not rerun TeX or Lean.')

@@ -12,8 +12,27 @@ This determines the leading exceptional-density coefficient and proves the
 fixed-width density-one conjecture of Lafrenière, Lewis, McNicholas, Striker,
 and Welch. The paper also
 includes the known width-one case with attribution. The constants and onset
-may depend on m; this is not a uniform growing-width estimate or a complete
-classification of finite orbits.
+may depend on m. The companion results below supply a separate growing-width
+bound; no complete classification of finite orbits is claimed.
+
+## Companion results
+
+The [companion guide](docs/COMPANION_RESULTS.md) and complete
+[Lean sources](formal/companions/README.md) also establish:
+
+- Density one for every fixed positive width, including width one
+- Exceptional fraction at most min(1, 73m³/n) for m > 0 and n ≥ 4m²+11m−1,
+  hence density one when m = o(n^(1/3))
+- At width three, limiting exceptional-state shares 2/5 and 3/5 for periods
+  2n+10 and 3n+14, with vanishing remaining share
+- The exact row-nonempty Narayana enumeration, with prior-work credit
+- Three explicit width-four chamber families and an all-width two-block
+  family with exact least periods and all cyclic-symmetry shortenings
+
+The chamber statements require their printed gap bounds and normalized-gap
+hypotheses. The width-three result weights states and is asymptotic; it is not
+a universal finite-size split. See the guide for exact assumptions, formulas,
+attribution, and theorem links.
 
 ## Paper and formal proof
 
@@ -33,8 +52,9 @@ are `propext`, `Classical.choice`, and `Quot.sound`.
 
 The paper's denominator and proper-period arguments differ from their formal
 counterparts; the source map describes those alignments. The width-one argument
-is outside the principal m ≥ 2 formal theorem. The separate width-three
-period-distribution companion is outside this release.
+is outside the principal m ≥ 2 formal theorem and is covered by the companion
+project. The main paper and its original proof closure are preserved; the
+[companion source map](docs/COMPANION_SOURCE_MAP.md) describes the added results.
 
 ## Reproduce
 
@@ -46,6 +66,7 @@ output directory outside the input source packet.
 ```sh
 python3 reproduction/verify_release.py
 python3 formal/sharp-allwidth/scripts/source_checks.py
+python3 reproduction/check_companions.py --source-only
 bash reproduction/build-manuscript.sh --check-only
 ```
 

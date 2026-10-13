@@ -120,3 +120,13 @@ for the recorded heavy verification on the unchanged mathematical source bytes.
 The release assembly runs lightweight source/inventory tests, formal prerequisite
 checks and actual TeX compilation; it does not claim a new full Lean replay or
 a clean-machine bootstrap test.
+
+## Companion results
+
+The additional self-contained proof closure is in `formal/companions`.
+See its [reproduction guide](../formal/companions/README.md) for the portable
+serial rebuild, exact dependency requirements, memory limits, and audit scope.
+The original paper and sharp-project commands above remain unchanged.
+
+Run `python3 reproduction/check_companions.py --source-only` for hashes and
+import closure only. This is separate from the full source rebuild and audit.

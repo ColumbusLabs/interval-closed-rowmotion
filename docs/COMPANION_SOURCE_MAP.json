@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "mathematical_source_manifest": "formal/companions/SOURCE_MANIFEST.json",
+  "results": [
+    {
+      "result": "Fixed positive width",
+      "path": "formal/companions/RowmotionCounting/DensityOne.lean",
+      "declarations": [
+        "RowmotionCounting.exact_period_fraction_tendsto_one"
+      ],
+      "scope": "Fixed natural m > 0; limit through natural n."
+    },
+    {
+      "result": "Standard minimal-period interface",
+      "path": "formal/companions/RowmotionCoverage/ActualCorollaries.lean",
+      "declarations": [
+        "RowmotionCoverage.minimalPeriod_density_one",
+        "RowmotionCoverage.width_one_minimalPeriod_density"
+      ],
+      "scope": "Actual interval-closed states; fixed positive width, including one."
+    },
+    {
+      "result": "Exact chain classification",
+      "path": "formal/companions/RowmotionChain/StandardPeriod.lean",
+      "declarations": [
+        "RowmotionChain.proper_state_minimalPeriod",
+        "RowmotionChain.minimalPeriod_exceptional_count_le"
+      ],
+      "scope": "All n; exceptional count at most floor((n+2)/2)+2. Prior chain classification is credited in the guide."
+    },
+    {
+      "result": "Finite growing-width bound",
+      "path": "formal/companions/RowmotionGrowingWidth/StandardPeriod.lean",
+      "declarations": [
+        "RowmotionGrowingWidth.minimalPeriod_exceptional_fraction_le"
+      ],
+      "scope": "m > 0 and n \u2265 4m\u00b2+11m\u22121; min(1,73m\u00b3/n)."
+    },
+    {
+      "result": "Growing-width limit",
+      "path": "formal/companions/RowmotionGrowingWidth/StandardPeriod.lean",
+      "declarations": [
+        "RowmotionGrowingWidth.minimalPeriod_density_of_littleO"
+      ],
+      "scope": "Positive integer width function m(n)=o(n^(1/3))."
+    },
+    {
+      "result": "Width-three state distribution",
+      "path": "formal/companions/RowmotionPeriodAsymptotic/Conditional.lean",
+      "declarations": [
+        "RowmotionPeriodAsymptotic.conditional_period_two_tendsto_two_fifths",
+        "RowmotionPeriodAsymptotic.conditional_period_three_tendsto_three_fifths",
+        "RowmotionPeriodAsymptotic.conditional_other_tendsto_zero"
+      ],
+      "scope": "Conditional exceptional-state shares, not uniform orbit sampling or a universal finite split. Exceptional count positive for n \u2265 181."
+    },
+    {
+      "result": "Width-three unconditional estimates",
+      "path": "formal/companions/RowmotionPeriodAsymptotic/ActualDistribution.lean",
+      "declarations": [
+        "RowmotionPeriodAsymptotic.period_two_count_asymptotic",
+        "RowmotionPeriodAsymptotic.period_three_count_asymptotic",
+        "RowmotionPeriodAsymptotic.other_count_asymptotic"
+      ],
+      "scope": "Leading counts n^5/60, n^5/40; quartic remaining count. The source also contains explicit coarse errors."
+    },
+    {
+      "result": "Narayana enumeration",
+      "path": "formal/companions/RowmotionNarayana/ExactNarayana.lean",
+      "declarations": [
+        "RowmotionNarayana.nonemptyICS_card_product",
+        "RowmotionNarayana.nonemptyICS_card_product_real"
+      ],
+      "scope": "m \u2265 1, n \u2265 0; row-nonempty states only, with prior-work attribution."
+    },
+    {
+      "result": "Narayana divisibility",
+      "path": "formal/companions/RowmotionNarayana/ExactNarayana.lean",
+      "declarations": [
+        "RowmotionNarayana.narayana_product_divides"
+      ],
+      "scope": "Exact integral product quotient."
+    },
+    {
+      "result": "Narayana bridge",
+      "path": "formal/companions/RowmotionNarayana/SharpBridge.lean",
+      "declarations": [
+        "RowmotionSharpAllWidth.actualNonemptyRowCount_exact_narayana",
+        "RowmotionSharpAllWidth.actualNonemptyRowCount_exact_narayana_nat"
+      ],
+      "scope": "Connects actual row-nonempty count to the main proof polynomial."
+    },
+    {
+      "result": "Width-four explicit boundary families",
+      "path": "formal/companions/RowmotionCoprimeCycle/WidthFourChamberPeriods.lean",
+      "declarations": [
+        "Rowmotion.CoprimeCycle.WidthFourStarts.boundary13_period",
+        "Rowmotion.CoprimeCycle.WidthFourStarts.boundary3_period",
+        "Rowmotion.CoprimeCycle.WidthFourStarts.boundary5_period"
+      ],
+      "scope": "Seven integer physical gaps sum to n\u22121, with respective gap floors 556,136,220. Exact normalized constant-line tests and corrected line periods."
+    },
+    {
+      "result": "Width-four explicit interior families",
+      "path": "formal/companions/RowmotionCoprimeCycle/WidthFourChamberPeriods.lean",
+      "declarations": [
+        "Rowmotion.CoprimeCycle.WidthFourStarts.interior13_period",
+        "Rowmotion.CoprimeCycle.WidthFourStarts.interior3_period",
+        "Rowmotion.CoprimeCycle.WidthFourStarts.interior5_period"
+      ],
+      "scope": "Eight integer free gaps, each \u2265 1000, sum to n\u22121; boundary conversion in InteriorStarts.lean."
+    },
+    {
+      "result": "All-width two-block boundary family",
+      "path": "formal/companions/RowmotionCoprimeCycle/TwoBlockChamberPeriods.lean",
+      "declarations": [
+        "Rowmotion.CoprimeCycle.TwoBlock.boundary_period",
+        "Rowmotion.CoprimeCycle.TwoBlock.boundary_constant_line"
+      ],
+      "scope": "m \u2265 2; 2m\u22121 physical gaps, each \u2265 m+6+(m\u22121)(2m\u22121)(m+2), sum to n\u22121; all cyclic divisors retained."
+    },
+    {
+      "result": "All-width full two-block interior chamber",
+      "path": "formal/companions/RowmotionCoprimeCycle/TwoBlockFullChamber.lean",
+      "declarations": [
+        "Rowmotion.CoprimeCycle.TwoBlock.chamber_period",
+        "Rowmotion.CoprimeCycle.TwoBlock.chamber_constant_line"
+      ],
+      "scope": "m \u2265 2; 2m free gaps under the same floor and sum. Exact actual-state construction and orbit transport."
+    }
+  ]
+}

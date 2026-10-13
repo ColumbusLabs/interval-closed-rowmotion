@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "date": "2026-10-13",
+  "mathematical_source_modules": 538,
+  "source_manifest_sha256": "c6e6aab5167392a2d615eb8700c562edc1ad3cde06b5c51affbd8f71eeb90d60",
+  "mathematical_source_set_sha256": "42930df7e8b2f7fac7e3219136404e4c745a698e3508a743472217ef547326a2",
+  "project_build_manifest_sha256": "606e8a18a54dadf46691dfbfef5ca2e88af6c117a51c99caef732fa2b64cc315",
+  "verification": "Interrupted-and-resumed fresh serial project-source rebuild followed by the final transitive dependency audit against the same hash-bound freshly built objects. The interruption retained 335 verified current-run modules; no historical project cache was used.",
+  "audit": {
+    "project_declarations": 20412,
+    "declaration_bearing_project_modules": 534,
+    "complete_type_value_dependency_declarations": 45026,
+    "all_538_expected_project_modules_imported": true,
+    "unsafe_dependencies": false,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "audit_source_sha256": "e79af05f9622d86d9663951c5fa4c78ec4ee36f06c7630bec6d5314caff7173d",
+    "audit_object_sha256": "b0ae042450a1f0d41de93754acf762065fa9c9d8e0b32d9f00772176809912c1",
+    "audit_log_sha256": "704e315bbeac2d8a63f62e79cb2b3fd404d12b8149b365cab407a994e1e1df56",
+    "source_map_declarations_checked": true,
+    "exit_code": 0
+  },
+  "trust_scope": {
+    "lean": "4.34.1",
+    "lean_commit": "5045d0056413266e57c625dcd7c365b10e377c52",
+    "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "historical_project_proof_objects_reused": false,
+    "resumed_current_run_project_modules": 335,
+    "third_party_cached_proof_objects_reused": true,
+    "mathlib_source_rebuilt": false,
+    "separate_fresh_kernel_imported_environment_replay": false
+  },
+  "finite_semantic_checks": {
+    "cases": 29,
+    "states": 1754,
+    "result_sha256": "446b2624e3c425b8fb5cd13da0dc6453adb2b270c410aeec7e67394dd4d61b8f",
+    "universal_proof": false
+  },
+  "reproduction_runner_tests": {
+    "tests": 22,
+    "result": "pass",
+    "runner_sha256": "1d9b1c74fcf6c9198df08ca01927cf871bfe19efd25850e31b49f4da5d4f7815",
+    "test_source_sha256": "7b51293f9232b77df461b7f47a35abf6fee511a531b3508949af2ffb8fc16eba"
+  }
+}
