@@ -2,8 +2,8 @@
   "schema_version": 2,
   "title": "Sharp exceptional density for rowmotion on interval-closed sets of a rectangle, with companion results",
   "author": "Columbus Labs",
-  "date": "2026-10-13",
-  "base_public_commit": "ccb18adfa1a3c56b80d87e033d67b5946588627d",
+  "date": "2026-10-14",
+  "base_public_commit": "a0c60be20ced1c3ca72014dd89f38e6a1d949c31",
   "main_paper_mathematical_module_count": 225,
   "companion_project_module_count": 538,
   "main_paper_and_original_proof_packet": "Unchanged",
@@ -32,8 +32,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4222,
-      "sha256": "18a1c1441bfa91200ac75666968bd25c8c0112c115d4878f5f19740752ca69d6"
+      "bytes": 4583,
+      "sha256": "a52aed4a0d96feeaff5d69c4daa1df44f04ada1995ef001b8613ca94fb9306c1"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -42,18 +42,18 @@
     },
     {
       "path": "docs/COMPANION_RESULTS.md",
-      "bytes": 7201,
-      "sha256": "163de29372fab3fe5fb70e0935f736df6692dde3a093af0b5932fbf9dec277bb"
+      "bytes": 8434,
+      "sha256": "1cda0b4e95f0cb6222f028920c98ed8e433fd946aa986a5a1610d02e13a41b5c"
     },
     {
       "path": "docs/COMPANION_SOURCE_MAP.json",
-      "bytes": 5806,
-      "sha256": "cab0b469eebef277d3da188dd5544f6286bb8a4d93b2b6f0bf7f59694681038a"
+      "bytes": 6348,
+      "sha256": "b41f54b2e86ade256f9bbea87965aa705e37f43da66be7851521d98ae8f61a68"
     },
     {
       "path": "docs/COMPANION_SOURCE_MAP.md",
-      "bytes": 5373,
-      "sha256": "6c86b218455ffee09ac931fa0e7791b603cb1d4a452f2df85d3b793828a93fff"
+      "bytes": 6251,
+      "sha256": "b3db8da5e5b4b652074c0b447276523fe024dcbaae8635c2d2112bbce7ad81d3"
     },
     {
       "path": "docs/THEOREM_SOURCE_MAP.json",
@@ -4165,5 +4165,6 @@
       "bytes": 1888,
       "sha256": "e7df9407f6f52c90eecb21548f5e2218424016d1302ad0cc7bda0b818256943a"
     }
-  ]
+  ],
+  "presentation_update": "Documentation only: explicit general coprime-cycle theorem and main-paper/companion scope distinction; mathematical sources and recorded verification unchanged."
 }

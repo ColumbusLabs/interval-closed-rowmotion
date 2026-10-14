@@ -2,6 +2,8 @@
 
 This map covers the additional results in [the companion guide](COMPANION_RESULTS.md). The [main paper source map](THEOREM_SOURCE_MAP.md) retains its original scope. Every source below is in the complete pinned companion project. See [reproduction and trust scope](../formal/companions/README.md).
 
+The 14 October documentation update adds the general coprime-cycle endpoint to this map. Its source was already included in the 538-module build and all-project-declaration dependency audit. The historical audit driver retains its original explicit checks of 28 named endpoints; this documentation update does not claim a new compiler run.
+
 ## Fixed positive width
 
 Fixed natural m > 0; limit through natural n.
@@ -89,6 +91,14 @@ Source: [SharpBridge.lean](../formal/companions/RowmotionNarayana/SharpBridge.le
 
 - `RowmotionSharpAllWidth.actualNonemptyRowCount_exact_narayana`
 - `RowmotionSharpAllWidth.actualNonemptyRowCount_exact_narayana_nat`
+
+## General coprime-cycle actual least period
+
+Actual boundary state at width m ≥ 2; positive recipe length L coprime to 2m−1; initial/transition/crossing/exact phase-return and periodic drift/top-event hypotheses; separation at least m+6+L(2m−1)(m+2). Constructs integral normalization and proves (2m−1)·period = r·(L(n+m+1)+2T), with r positive dividing 2m−1.
+
+Source: [RecipeNormalization.lean](../formal/companions/RowmotionCoprimeCycle/RecipeNormalization.lean).
+
+- `Rowmotion.CoprimeCycle.coprime_recipe_actual_period`
 
 ## Width-four explicit boundary families
 

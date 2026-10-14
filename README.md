@@ -26,6 +26,8 @@ The [companion guide](docs/COMPANION_RESULTS.md) and complete
 - At width three, limiting exceptional-state shares 2/5 and 3/5 for periods
   2n+10 and 3n+14, with vanishing remaining share
 - The exact row-nonempty Narayana enumeration, with prior-work credit
+- A general coprime-cycle least-period theorem with constructed integral
+  normalization and an explicit finite separation horizon
 - Three explicit width-four chamber families and an all-width two-block
   family with exact least periods and all cyclic-symmetry shortenings
 
@@ -35,6 +37,10 @@ a universal finite-size split. See the guide for exact assumptions, formulas,
 attribution, and theorem links.
 
 ## Paper and formal proof
+
+The PDF presents the main fixed-width theorem. The companion guide documents
+the subsequent completed extensions listed above, including their hypotheses
+and links to the formal proofs; those extensions are not added to the PDF.
 
 - [Read the paper](paper/rowmotion.pdf)
 - [LaTeX source](paper/rowmotion.tex) and [bibliography](paper/references.bib)

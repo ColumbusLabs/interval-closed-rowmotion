@@ -44,6 +44,28 @@ The formal proof includes exact divisibility and the length-zero boundary case. 
 
 Source: [exact Narayana enumeration](../formal/companions/RowmotionNarayana/ExactNarayana.lean).
 
+## General coprime-cycle mechanism
+
+For `m ≥ 2`, let `s` be an actual one-defect boundary state with separation
+`D`, and let `L > 0` be coprime to `2m−1`. Assume its initial phase matches the
+recipe, the explicit crossing and next-phase tests hold for the first
+`L(2m−1)` events, the phase returns to its initial value exactly at multiples
+of `L`, and both drift and the top-event indicator are `L`-periodic. If
+`D ≥ m+6+L(2m−1)(m+2)`, the theorem constructs an integral normalizing vector.
+Writing `r` for the least cyclic-shift period of the normalized physical gaps
+and `T` for the number of top events in one `L`-event cycle, `r > 0` divides
+`2m−1` and the actual least rowmotion period `P` satisfies
+
+`(2m−1)P = r[L(n+m+1)+2T]`.
+
+The proof excludes earlier returns, including non-event times. This theorem
+is conditional on the displayed geometric and recipe checks; it neither
+realizes arbitrary recipes nor covers noncoprime `L`. The explicit families
+below discharge their required geometric and recipe conditions.
+
+Source: [constructed normalization and actual least-period identity](../formal/companions/RowmotionCoprimeCycle/RecipeNormalization.lean),
+`Rowmotion.CoprimeCycle.coprime_recipe_actual_period`.
+
 ## Three explicit width-four families
 
 The constructors `start13`, `start3`, and `start5` turn seven integer physical gaps `h₀,…,h₆`, summing to `n−1`, into actual interval-closed boundary states. Their sufficient minimum gap bounds are 556, 136, and 220, respectively.

@@ -34,7 +34,7 @@
       "declarations": [
         "RowmotionGrowingWidth.minimalPeriod_exceptional_fraction_le"
       ],
-      "scope": "m > 0 and n \u2265 4m\u00b2+11m\u22121; min(1,73m\u00b3/n)."
+      "scope": "m > 0 and n ≥ 4m²+11m−1; min(1,73m³/n)."
     },
     {
       "result": "Growing-width limit",
@@ -52,7 +52,7 @@
         "RowmotionPeriodAsymptotic.conditional_period_three_tendsto_three_fifths",
         "RowmotionPeriodAsymptotic.conditional_other_tendsto_zero"
       ],
-      "scope": "Conditional exceptional-state shares, not uniform orbit sampling or a universal finite split. Exceptional count positive for n \u2265 181."
+      "scope": "Conditional exceptional-state shares, not uniform orbit sampling or a universal finite split. Exceptional count positive for n ≥ 181."
     },
     {
       "result": "Width-three unconditional estimates",
@@ -71,7 +71,7 @@
         "RowmotionNarayana.nonemptyICS_card_product",
         "RowmotionNarayana.nonemptyICS_card_product_real"
       ],
-      "scope": "m \u2265 1, n \u2265 0; row-nonempty states only, with prior-work attribution."
+      "scope": "m ≥ 1, n ≥ 0; row-nonempty states only, with prior-work attribution."
     },
     {
       "result": "Narayana divisibility",
@@ -91,6 +91,14 @@
       "scope": "Connects actual row-nonempty count to the main proof polynomial."
     },
     {
+      "result": "General coprime-cycle actual least period",
+      "path": "formal/companions/RowmotionCoprimeCycle/RecipeNormalization.lean",
+      "declarations": [
+        "Rowmotion.CoprimeCycle.coprime_recipe_actual_period"
+      ],
+      "scope": "Actual boundary state at width m ≥ 2; positive recipe length L coprime to 2m−1; initial/transition/crossing/exact phase-return and periodic drift/top-event hypotheses; separation at least m+6+L(2m−1)(m+2). Constructs integral normalization and proves (2m−1)·period = r·(L(n+m+1)+2T), with r positive dividing 2m−1."
+    },
+    {
       "result": "Width-four explicit boundary families",
       "path": "formal/companions/RowmotionCoprimeCycle/WidthFourChamberPeriods.lean",
       "declarations": [
@@ -98,7 +106,7 @@
         "Rowmotion.CoprimeCycle.WidthFourStarts.boundary3_period",
         "Rowmotion.CoprimeCycle.WidthFourStarts.boundary5_period"
       ],
-      "scope": "Seven integer physical gaps sum to n\u22121, with respective gap floors 556,136,220. Exact normalized constant-line tests and corrected line periods."
+      "scope": "Seven integer physical gaps sum to n−1, with respective gap floors 556,136,220. Exact normalized constant-line tests and corrected line periods."
     },
     {
       "result": "Width-four explicit interior families",
@@ -108,7 +116,7 @@
         "Rowmotion.CoprimeCycle.WidthFourStarts.interior3_period",
         "Rowmotion.CoprimeCycle.WidthFourStarts.interior5_period"
       ],
-      "scope": "Eight integer free gaps, each \u2265 1000, sum to n\u22121; boundary conversion in InteriorStarts.lean."
+      "scope": "Eight integer free gaps, each ≥ 1000, sum to n−1; boundary conversion in InteriorStarts.lean."
     },
     {
       "result": "All-width two-block boundary family",
@@ -117,7 +125,7 @@
         "Rowmotion.CoprimeCycle.TwoBlock.boundary_period",
         "Rowmotion.CoprimeCycle.TwoBlock.boundary_constant_line"
       ],
-      "scope": "m \u2265 2; 2m\u22121 physical gaps, each \u2265 m+6+(m\u22121)(2m\u22121)(m+2), sum to n\u22121; all cyclic divisors retained."
+      "scope": "m ≥ 2; 2m−1 physical gaps, each ≥ m+6+(m−1)(2m−1)(m+2), sum to n−1; all cyclic divisors retained."
     },
     {
       "result": "All-width full two-block interior chamber",
@@ -126,7 +134,7 @@
         "Rowmotion.CoprimeCycle.TwoBlock.chamber_period",
         "Rowmotion.CoprimeCycle.TwoBlock.chamber_constant_line"
       ],
-      "scope": "m \u2265 2; 2m free gaps under the same floor and sum. Exact actual-state construction and orbit transport."
+      "scope": "m ≥ 2; 2m free gaps under the same floor and sum. Exact actual-state construction and orbit transport."
     }
   ]
 }
